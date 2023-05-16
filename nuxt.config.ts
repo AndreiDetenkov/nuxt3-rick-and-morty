@@ -1,9 +1,10 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from 'nuxt/config'
+import eslintPlugin from 'vite-plugin-eslint'
+import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
   typescript: {
-    strict: true
+    strict: true,
   },
   postcss: {
     plugins: {
@@ -11,5 +12,8 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  css: ['~/assets/css/main.css']
-});
+  css: ['~/assets/css/main.css'],
+  vite: {
+    plugins: [eslintPlugin(), svgLoader()],
+  },
+})

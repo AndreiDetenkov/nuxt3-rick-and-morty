@@ -6,13 +6,33 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "^18",
+    "@typescript-eslint/parser": "^5.59.6",
+    "@vue/compiler-sfc": "^3.3.2",
     "autoprefixer": "^10.4.14",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "nuxt": "^3.4.3",
     "postcss": "^8.4.23",
-    "tailwindcss": "^3.3.2"
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0",
+    "sass": "^1.62.1",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.4",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-svg-loader": "^4.0.0"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
