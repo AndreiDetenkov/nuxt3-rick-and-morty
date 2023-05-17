@@ -1,7 +1,7 @@
 <template>
-  <div class="flex h-screen w-screen flex-col">
+  <div class="flex h-screen flex-col">
     <AppHeader />
-    <slot />
+    <main class="flex-1"><slot /></main>
     <AppFooter />
   </div>
 </template>

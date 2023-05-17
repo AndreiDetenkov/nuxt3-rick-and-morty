@@ -9,10 +9,6 @@ const menu: MenuInterface[] = [
     name: 'Characters',
     path: '/characters',
   },
-  {
-    name: 'Episodes',
-    path: '/episodes',
-  },
 ]
 </script>
 
