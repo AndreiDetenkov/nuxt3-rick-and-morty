@@ -4,7 +4,7 @@ interface MenuInterface {
   path: string
 }
 
-const menu = ref<MenuInterface[]>([
+const menu: MenuInterface[] = [
   {
     name: 'Characters',
     path: '/characters',
@@ -13,7 +13,7 @@ const menu = ref<MenuInterface[]>([
     name: 'Episodes',
     path: '/episodes',
   },
-])
+]
 </script>
 
 <template>
