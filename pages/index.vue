@@ -1,8 +1,6 @@
 <template>
   <main>
-    <h1 class="text-3xl">
-      Main
-    </h1>
+    <h1 class="text-3xl font-medium">Main</h1>
   </main>
 </template>
 
