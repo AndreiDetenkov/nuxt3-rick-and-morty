@@ -3,27 +3,19 @@ import Logo from 'assets/icons/logo.svg'
 </script>
 
 <template>
-  <header class="header">
-    <nav class="header__nav">
-      <NuxtLink to="/">
-        <Logo class="logo" />
-      </NuxtLink>
+  <header
+    class="m-auto flex h-[60px] w-full flex-row items-center justify-between px-6"
+  >
+    <NuxtLink to="/">
+      <Logo class="h-auto w-10 fill-[#333]" />
+    </NuxtLink>
 
+    <nav class="flex flex-row items-center space-x-6">
       <HeaderMenu />
+
+      <div class="flex items-center border-l border-neutral-400 pl-6">
+        <ToggleDarkMode />
+      </div>
     </nav>
   </header>
 </template>
-
-<style scoped lang="scss">
-.header {
-  @apply m-auto flex h-[60px] w-full flex-row items-center justify-center px-6;
-
-  &__nav {
-    @apply flex w-full flex-row items-center justify-between;
-  }
-}
-
-.logo {
-  @apply h-auto w-10 fill-[#333];
-}
-</style>

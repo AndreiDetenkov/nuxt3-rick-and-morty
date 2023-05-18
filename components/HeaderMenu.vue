@@ -31,7 +31,7 @@ const menu: MenuInterface[] = [
   @apply flex flex-row items-center justify-between space-x-7;
 
   &__link {
-    @apply text-lg font-bold text-[#333] transition-colors duration-300 hover:text-orange-400;
+    @apply text-lg font-bold text-[#333] transition-colors duration-300 hover:text-orange-400 dark:text-slate-400 dark:transition-colors dark:duration-300 dark:hover:text-orange-400;
 
     &--active {
       @apply text-orange-400;

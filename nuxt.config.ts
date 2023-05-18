@@ -3,9 +3,7 @@ import eslintPlugin from 'vite-plugin-eslint'
 import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
-  typescript: {
-    strict: true,
-  },
+  modules: ['@vueuse/nuxt'],
   postcss: {
     plugins: {
       tailwindcss: {},
