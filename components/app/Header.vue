@@ -4,7 +4,7 @@ import Logo from 'assets/icons/logo.svg?skipsvgo'
 
 <template>
   <header
-    class="m-auto flex h-[60px] w-full flex-row items-center justify-between px-6"
+    class="z-2 relative flex min-h-[60px] w-full flex-row items-center justify-between px-6"
   >
     <NuxtLink to="/">
       <Logo class="h-auto w-10 fill-dark-gray dark:fill-slate-500" />

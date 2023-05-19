@@ -14,4 +14,5 @@ export default defineNuxtConfig({
   vite: {
     plugins: [eslintPlugin(), svgLoader()],
   },
+  typescript: { strict: true },
 })
