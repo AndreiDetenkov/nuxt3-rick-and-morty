@@ -7,7 +7,7 @@ import Logo from 'assets/icons/logo.svg?skipsvgo'
     class="m-auto flex h-[60px] w-full flex-row items-center justify-between px-6"
   >
     <NuxtLink to="/">
-      <Logo class="h-auto w-10 fill-dark-gray" />
+      <Logo class="h-auto w-10 fill-dark-gray dark:fill-slate-500" />
     </NuxtLink>
 
     <nav class="flex flex-row items-center space-x-6">

@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .dark {
-  @apply bg-slate-900 text-slate-400;
+  @apply bg-slate-900 text-slate-500;
 }
