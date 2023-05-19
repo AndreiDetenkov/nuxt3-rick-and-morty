@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Logo from 'assets/icons/logo.svg'
+import Logo from 'assets/icons/logo.svg?skipsvgo'
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import Logo from 'assets/icons/logo.svg'
     class="m-auto flex h-[60px] w-full flex-row items-center justify-between px-6"
   >
     <NuxtLink to="/">
-      <Logo class="h-auto w-10 fill-[#333]" />
+      <Logo class="h-auto w-10 fill-dark-gray" />
     </NuxtLink>
 
     <nav class="flex flex-row items-center space-x-6">
