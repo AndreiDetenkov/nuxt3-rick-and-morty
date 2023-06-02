@@ -14,9 +14,11 @@ module.exports = {
       colors: {
         black: '#202329',
         white: '#fff',
+        'gray-lighten': '#9e9e9e',
+        gray: '#3C3E44',
         'light-gray': '#f5f5f5',
         'dark-gray': '#333',
-        'dark-gray-2': '#272B33',
+        'dark-gray-darker': '#272B33',
       },
     },
   },

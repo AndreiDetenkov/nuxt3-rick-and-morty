@@ -1,9 +1,9 @@
-import { Character } from '~/server/api/types'
+import { Character } from '~/types'
 
 function getRandomInt(min: number, max: number): number {
   min = Math.ceil(min)
   max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min + 1) + min)
+  return Math.floor(Math.random() * (max - min) + min)
 }
 
 function generateRandomNumbers(): number[] {
@@ -21,5 +21,6 @@ export default defineEventHandler(async () => {
   const response: Character[] = await $fetch(
     `https://rickandmortyapi.com/api/character/${ids}`
   )
+
   return response
 })
