@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^0.5.5",
+    "@nuxt/image-edge": "1.0.0-28094923.e859bba",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "^18",

@@ -3,7 +3,7 @@ import eslintPlugin from 'vite-plugin-eslint'
 import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
-  modules: ['@vueuse/nuxt', '@nuxt/devtools'],
+  modules: ['@vueuse/nuxt', '@nuxt/devtools', '@nuxt/image-edge'],
 
   postcss: {
     plugins: {
