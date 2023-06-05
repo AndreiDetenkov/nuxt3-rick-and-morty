@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import LiveIndicator from '~/components/section/LiveIndicator.vue'
 import { Character } from '~/types'
 
 defineProps<{ character: Character }>()
@@ -24,7 +25,8 @@ defineProps<{ character: Character }>()
             {{ character.name }}
           </h2>
         </nuxt-link>
-        <span class="text-sm">
+        <span class="flex items-center text-sm capitalize">
+          <live-indicator :status="character.status" />
           {{ character.status }} - {{ character.species }}
         </span>
       </section>

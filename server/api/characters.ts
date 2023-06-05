@@ -21,6 +21,5 @@ export default defineEventHandler(async () => {
   const response: Character[] = await $fetch(
     `https://rickandmortyapi.com/api/character/${ids}`
   )
-
   return response
 })
