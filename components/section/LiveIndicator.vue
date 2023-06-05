@@ -7,8 +7,8 @@ const enum Status {
 const props = defineProps<{ status: string }>()
 
 const statusColor = computed(() => {
-  if (props.status === Status.Alive) return 'bg-red-500'
-  if (props.status === Status.Dead) return 'bg-green-500'
+  if (props.status === Status.Dead) return 'bg-red-500'
+  if (props.status === Status.Alive) return 'bg-green-500'
   return 'bg-neutral-400'
 })
 </script>
