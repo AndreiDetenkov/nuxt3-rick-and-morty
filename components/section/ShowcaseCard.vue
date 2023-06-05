@@ -18,7 +18,7 @@ defineProps<{ character: Character }>()
 
     <div class="flex w-full flex-col p-3 text-white md:w-3/5">
       <section class="flex flex-1 flex-col justify-start">
-        <nuxt-link to="/">
+        <nuxt-link :to="`/character/${character.id}`">
           <h2
             class="truncate text-2xl font-bold tracking-wide text-light-gray transition-colors duration-300 hover:text-orange-400"
           >

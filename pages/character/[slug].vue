@@ -1,0 +1,70 @@
+<script setup lang="ts">
+import LocationIcon from 'assets/icons/location.svg?skipsvgo'
+import AccountIcon from '~/assets/icons/account.svg?skipsvgo'
+import GenderIcon from '~/assets/icons/gender.svg?skipsvgo'
+import PulseIcon from '~/assets/icons/pulse.svg?skipsvgo'
+import AppSubTitle from '~/components/app/AppSubTitle.vue'
+
+const route = useRoute()
+const { data } = await useFetch('/api/character/' + route.params.slug, {
+  baseURL: 'https://rickandmortyapi.com',
+})
+
+interface DataInterface {
+  key: string
+  value: string
+  icon: HTMLElement & SVGElement
+}
+
+const character = computed<DataInterface[]>(() => {
+  return [
+    {
+      icon: PulseIcon,
+      key: 'status:',
+      value: data.value.status,
+    },
+    {
+      icon: GenderIcon,
+      key: 'gender:',
+      value: data.value.gender,
+    },
+    {
+      icon: AccountIcon,
+      key: 'species:',
+      value: data.value.species,
+    },
+    {
+      icon: LocationIcon,
+      key: 'location:',
+      value: data.value.location.name,
+    },
+  ]
+})
+</script>
+
+<template>
+  <article>
+    <section-hero />
+
+    <section class="app-container relative text-center">
+      <nuxt-img
+        :src="data.image"
+        :alt="data.name"
+        loading="lazy"
+        class="absolute left-0 right-0 top-[-70px] m-auto max-w-xs rounded-lg shadow-lg shadow-dark-gray"
+      />
+
+      <app-sub-title :title="data.name" class="mb-8 mt-[200px]" />
+
+      <p
+        v-for="{ icon, key, value } in character"
+        :key="key"
+        class="mb-4 flex items-center justify-center"
+      >
+        <component :is="icon" class="mr-2 h-7 w-7" />
+        <span class="text-sm text-gray">{{ key }}</span>
+        <b class="truncate text-xl md:text-xl"> &nbsp;{{ value }} </b>
+      </p>
+    </section>
+  </article>
+</template>

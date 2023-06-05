@@ -23,3 +23,7 @@ body {
 .dark {
   @apply bg-neutral-800 text-gray;
 }
+
+.app-container {
+  @apply container mx-auto px-6 py-16;
+}
