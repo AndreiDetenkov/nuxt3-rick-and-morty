@@ -17,3 +17,8 @@ export interface Character {
   url: string
   created: Date
 }
+
+export const enum Status {
+  Alive = 'Alive',
+  Dead = 'Dead',
+}

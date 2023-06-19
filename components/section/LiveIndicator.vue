@@ -1,8 +1,5 @@
 <script setup lang="ts">
-const enum Status {
-  Alive = 'Alive',
-  Dead = 'Dead',
-}
+import { Status } from '~/utils/types'
 
 const props = defineProps<{ status: string }>()
 
