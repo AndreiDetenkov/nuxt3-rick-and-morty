@@ -21,7 +21,7 @@ body {
 }
 
 .dark {
-  @apply bg-neutral-800 text-gray;
+  @apply bg-neutral-800 text-neutral-400;
 }
 
 .app-container {

@@ -56,15 +56,24 @@ const character = computed<DataInterface[]>(() => {
 
       <app-sub-title :title="data.name" class="mb-8 mt-[200px]" />
 
-      <p
-        v-for="{ icon, key, value } in character"
-        :key="key"
-        class="mb-4 flex items-center justify-center"
+      <ul class="mb-14">
+        <li
+          v-for="{ icon, key, value } in character"
+          :key="key"
+          class="mb-4 flex items-center justify-center"
+        >
+          <component :is="icon" class="mr-2 h-7 w-7 dark:fill-gray-lighten" />
+          <span class="text-sm text-gray dark:text-light-gray">{{ key }}</span>
+          <b class="truncate text-xl md:text-xl"> &nbsp;{{ value }} </b>
+        </li>
+      </ul>
+
+      <NuxtLink
+        to="/"
+        class="dark:hover:text-dark-gray-darken dark:hover:border-dark-gray-darken rounded-lg border px-8 py-3 transition-all duration-300 hover:border-orange-400 hover:bg-orange-400 dark:hover:text-dark-gray"
       >
-        <component :is="icon" class="mr-2 h-7 w-7" />
-        <span class="text-sm text-gray">{{ key }}</span>
-        <b class="truncate text-xl md:text-xl"> &nbsp;{{ value }} </b>
-      </p>
+        Go Back
+      </NuxtLink>
     </section>
   </article>
 </template>
