@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { Status } from '~/utils/types'
+import { StatusEnum } from '~/utils/types'
 
 const props = defineProps<{ status: string }>()
 
 const statusColor = computed(() => {
-  if (props.status === Status.Dead) return 'bg-red-500'
-  if (props.status === Status.Alive) return 'bg-green-500'
+  if (props.status === StatusEnum.Dead) return 'bg-red-500'
+  if (props.status === StatusEnum.Alive) return 'bg-green-500'
   return 'bg-neutral-400'
 })
 </script>
