@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import LiveIndicator from '~/components/section/LiveIndicator.vue'
-import { Character } from '~/types'
+import { Character } from '~/utils/types'
 
 defineProps<{ character: Character }>()
 </script>
 
 <template>
-  <article class="card">
+  <article
+    class="m-3 flex h-auto w-full max-w-[600px] flex-col overflow-hidden rounded-lg bg-gray shadow-md shadow-dark-gray-darker md:h-[220px] md:flex-row"
+  >
     <div class="w-full md:w-2/5">
       <nuxt-img
         :src="character.image"
@@ -55,9 +57,3 @@ defineProps<{ character: Character }>()
     </div>
   </article>
 </template>
-
-<style scoped lang="scss">
-.card {
-  @apply m-3 flex h-auto w-full max-w-[600px] flex-col overflow-hidden rounded-lg bg-gray shadow-md shadow-dark-gray-darker md:h-[220px] md:flex-row;
-}
-</style>
