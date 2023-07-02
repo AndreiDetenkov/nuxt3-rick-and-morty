@@ -64,28 +64,9 @@ export interface Episode extends ResourceBase {
   characters: string[]
 }
 
-export interface ApiResponse<T> {
-  /** The HTTP status code from the API response */
-  status: number
-  /** The HTTP status message from the API response */
-  statusMessage: string
-  /** The response that was provided by the API */
-  data: T
-}
-
-export interface Info<T> {
-  /**
-   * The API will automatically paginate the responses. You will receive up to `20` documents per page.
-   */
-  info?: {
-    /** The length of the response */
-    count: number
-    /** The amount of pages */
-    pages: number
-    /** Link to the next page (if it exists) */
-    next: string | null
-    /** Link to the previous page (if it exists) */
-    prev: string | null
-  }
-  results?: T
+export interface Info {
+  count: number
+  pages: number
+  next: string | null
+  prev: string | null
 }

@@ -7,7 +7,7 @@ defineProps<{ character: Character }>()
 
 <template>
   <article
-    class="m-3 flex h-auto w-full max-w-[600px] flex-col overflow-hidden rounded-lg bg-gray shadow-md shadow-dark-gray-darker md:h-[220px] md:flex-row"
+    class="m-3 flex h-auto max-w-[600px] flex-col overflow-hidden rounded-lg bg-gray shadow-md shadow-dark-gray-darker md:h-[220px] md:flex-row"
   >
     <div class="w-full md:w-2/5">
       <nuxt-img
