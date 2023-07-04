@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import ShowcaseCard from '~/components/section/ShowcaseCard.vue'
 import { Character, Info } from '~/utils/types'
 
 const { data: response, pending } = await useFetch(
@@ -18,11 +17,7 @@ const { results } = response.value as {
     <div v-else>
       <div class="p-6 md:px-0 md:py-16">
         <div class="grid grid-cols-1 gap-8 xl:grid-cols-2 2xl:grid-cols-3">
-          <showcase-card
-            v-for="character in results"
-            :key="character.id"
-            :character="character"
-          />
+          <pre>{{ results }}</pre>
         </div>
       </div>
     </div>

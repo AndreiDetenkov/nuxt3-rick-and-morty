@@ -10,7 +10,7 @@ const { data } = await useFetch('/api/characters')
       class="flex max-w-[1920px] flex-wrap items-center justify-center p-6 md:px-0 md:py-16"
     >
       <showcase-card
-        v-for="character in data?.characters"
+        v-for="character in data"
         :key="character.id"
         :character="character"
       />
