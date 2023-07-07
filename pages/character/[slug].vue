@@ -4,11 +4,14 @@ import AccountIcon from '~/assets/icons/account.svg?skipsvgo'
 import GenderIcon from '~/assets/icons/gender.svg?skipsvgo'
 import PulseIcon from '~/assets/icons/pulse.svg?skipsvgo'
 import AppSubTitle from '~/components/app/AppSubTitle.vue'
+import { Character } from '~/utils/types'
 
 const route = useRoute()
 const { data } = await useFetch('/api/character/' + route.params.slug, {
   baseURL: 'https://rickandmortyapi.com',
 })
+const { status, gender, species, location, image, name } =
+  data.value as Character
 
 interface DataInterface {
   key: string
@@ -21,22 +24,22 @@ const character = computed<DataInterface[]>(() => {
     {
       icon: PulseIcon,
       key: 'status:',
-      value: data.value.status,
+      value: status,
     },
     {
       icon: GenderIcon,
       key: 'gender:',
-      value: data.value.gender,
+      value: gender,
     },
     {
       icon: AccountIcon,
       key: 'species:',
-      value: data.value.species,
+      value: species,
     },
     {
       icon: LocationIcon,
       key: 'location:',
-      value: data.value.location.name,
+      value: location.name,
     },
   ]
 })
@@ -48,13 +51,13 @@ const character = computed<DataInterface[]>(() => {
 
     <section class="app-container relative text-center">
       <nuxt-img
-        :src="data.image"
-        :alt="data.name"
+        :src="image"
+        :alt="name"
         loading="lazy"
         class="absolute left-0 right-0 top-[-70px] m-auto max-w-xs rounded-lg shadow-lg shadow-dark-gray"
       />
 
-      <app-sub-title :title="data.name" class="mb-8 mt-[200px]" />
+      <app-sub-title :title="name" class="mb-8 mt-[200px]" />
 
       <ul class="mb-14">
         <li
