@@ -16,8 +16,24 @@ const { results } = response.value as {
     <div v-if="pending">Loading...</div>
     <div v-else>
       <div class="p-6 md:px-0 md:py-16">
-        <div class="grid grid-cols-1 gap-8 xl:grid-cols-2 2xl:grid-cols-3">
-          <pre>{{ results }}</pre>
+        <div
+          class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"
+        >
+          <div v-for="card in results" :key="card.id">
+            <article
+              class="grid place-items-center gap-4 rounded-xl border p-4"
+            >
+              <nuxt-img
+                :src="card.image"
+                :alt="card.name"
+                class="h-auto w-full rounded-xl"
+                loading="lazy"
+              />
+              <h2 class="truncate text-2xl font-bold tracking-wide">
+                {{ card.name }}
+              </h2>
+            </article>
+          </div>
         </div>
       </div>
     </div>
