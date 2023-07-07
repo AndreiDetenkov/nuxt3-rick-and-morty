@@ -1,14 +1,13 @@
 import { shallowMount } from '@vue/test-utils'
 import { describe, it } from 'vitest'
-import AppTitle from '../AppTitle.vue'
+import AppSubTitle from '../AppSubTitle.vue'
 
 describe('AppTitle', () => {
   it('should render title prop', () => {
-    const title = 'my_title'
-    const wrapper = shallowMount(AppTitle, {
+    const title = 'my_subtitle'
+    const wrapper = shallowMount(AppSubTitle, {
       propsData: { title },
     })
-
     expect(wrapper.text()).toContain(title)
   })
 })
