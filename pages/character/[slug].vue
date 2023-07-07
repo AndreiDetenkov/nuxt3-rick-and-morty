@@ -16,7 +16,7 @@ const { status, gender, species, location, image, name } =
 interface DataInterface {
   key: string
   value: string
-  icon: HTMLElement & SVGElement
+  icon: { class: string }
 }
 
 const character = computed<DataInterface[]>(() => {
