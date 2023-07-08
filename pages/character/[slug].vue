@@ -10,39 +10,30 @@ const route = useRoute()
 const { data } = await useFetch('/api/character/' + route.params.slug, {
   baseURL: 'https://rickandmortyapi.com',
 })
-const { status, gender, species, location, image, name } =
-  data.value as Character
+const { status, gender, species, location, image, name } = data.value as Character
 
-interface DataInterface {
-  key: string
-  value: string
-  icon: { class: string }
-}
-
-const character = computed<DataInterface[]>(() => {
-  return [
-    {
-      icon: PulseIcon,
-      key: 'status:',
-      value: status,
-    },
-    {
-      icon: GenderIcon,
-      key: 'gender:',
-      value: gender,
-    },
-    {
-      icon: AccountIcon,
-      key: 'species:',
-      value: species,
-    },
-    {
-      icon: LocationIcon,
-      key: 'location:',
-      value: location.name,
-    },
-  ]
-})
+const list = computed(() => [
+  {
+    icon: PulseIcon,
+    key: 'status:',
+    value: status,
+  },
+  {
+    icon: GenderIcon,
+    key: 'gender:',
+    value: gender,
+  },
+  {
+    icon: AccountIcon,
+    key: 'species:',
+    value: species,
+  },
+  {
+    icon: LocationIcon,
+    key: 'location:',
+    value: location.name,
+  },
+])
 </script>
 
 <template>
@@ -61,7 +52,7 @@ const character = computed<DataInterface[]>(() => {
 
       <ul class="mb-14">
         <li
-          v-for="{ icon, key, value } in character"
+          v-for="{ icon, key, value } in list"
           :key="key"
           class="mb-4 flex items-center justify-center"
         >
@@ -71,12 +62,7 @@ const character = computed<DataInterface[]>(() => {
         </li>
       </ul>
 
-      <NuxtLink
-        to="/"
-        class="dark:hover:text-dark-gray-darken dark:hover:border-dark-gray-darken rounded-lg border px-8 py-3 transition-all duration-300 hover:border-orange-400 hover:bg-orange-400 dark:hover:text-dark-gray"
-      >
-        Go Back
-      </NuxtLink>
+      <app-back-button />
     </section>
   </article>
 </template>
