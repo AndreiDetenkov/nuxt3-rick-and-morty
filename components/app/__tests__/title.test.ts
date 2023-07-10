@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import { describe, it } from 'vitest'
-import AppTitle from '../AppTitle.vue'
+import AppTitle from '../Title.vue'
 
 describe('AppTitle', () => {
   it('should render title prop', () => {

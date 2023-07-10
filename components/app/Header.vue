@@ -3,9 +3,7 @@ import Logo from 'assets/icons/logo.svg?skipsvgo'
 </script>
 
 <template>
-  <header
-    class="z-2 relative flex min-h-[60px] w-full flex-row items-center justify-between px-6"
-  >
+  <header class="z-2 relative flex min-h-[60px] w-full flex-row items-center justify-between px-6">
     <NuxtLink to="/">
       <Logo class="h-auto w-10 fill-dark-gray dark:fill-gray-lighten" />
     </NuxtLink>

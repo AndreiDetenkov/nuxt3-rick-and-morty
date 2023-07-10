@@ -3,7 +3,7 @@ import LocationIcon from 'assets/icons/location.svg?skipsvgo'
 import AccountIcon from '~/assets/icons/account.svg?skipsvgo'
 import GenderIcon from '~/assets/icons/gender.svg?skipsvgo'
 import PulseIcon from '~/assets/icons/pulse.svg?skipsvgo'
-import AppSubTitle from '~/components/app/AppSubTitle.vue'
+import AppSubTitle from '~/components/app/SubTitle.vue'
 import { Character } from '~/utils/types'
 
 const route = useRoute()
