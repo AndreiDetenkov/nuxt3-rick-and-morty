@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is an example of how to use the [Rick and Morty API](https://rickandmortyapi.com/) with Nuxt 3.
 
 ## Setup
 
