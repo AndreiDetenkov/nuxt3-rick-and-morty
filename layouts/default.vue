@@ -5,7 +5,11 @@ import TheFooter from "~/components/the-footer.vue";
 
 <template>
   <NuxtLoadingIndicator/>
-  <the-header/>
-  <slot/>
-  <the-footer/>
+  <div class="container flex h-dvh flex-col">
+    <the-header/>
+    <main class="flex-1">
+      <slot/>
+    </main>
+    <the-footer/>
+  </div>
 </template>
