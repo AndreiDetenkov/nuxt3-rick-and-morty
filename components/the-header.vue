@@ -3,5 +3,5 @@
 </script>
 
 <template>
-<header>header</header>
+  <header>header</header>
 </template>

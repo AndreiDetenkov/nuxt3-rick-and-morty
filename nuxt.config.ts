@@ -1,25 +1,24 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  css: ["~/assets/css/main.scss"],
+  css: ['~/assets/css/main.scss'],
 
   typescript: {
     typeCheck: false,
-    strict: true
+    strict: true,
   },
 
   devtools: { enabled: true },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
 
   colorMode: {
     preference: 'system',
     fallback: 'light',
-    classSuffix: ''
+    classSuffix: '',
   },
 
   tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css'
+    cssPath: '~/assets/css/tailwind.css',
   },
-
 
 })

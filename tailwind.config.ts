@@ -1,16 +1,16 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 export default <Partial<Config>>{
   darkMode: 'class',
   content: [],
   theme: {
     container: {
-      center: true
+      center: true,
     },
     extend: {
       colors: {
-        title: '#202329',
-        primary: '#3C3E44',
+        'title': '#202329',
+        'primary': '#3C3E44',
         'primary-light': '#9e9e9e',
         'primary-lighter': '#f5f5f5',
         'primary-dark': '#333',
@@ -20,4 +20,3 @@ export default <Partial<Config>>{
   },
   plugins: [],
 }
-

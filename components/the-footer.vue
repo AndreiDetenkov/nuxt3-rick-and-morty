@@ -3,5 +3,5 @@
 </script>
 
 <template>
-<footer>footer</footer>
+  <footer>footer</footer>
 </template>
