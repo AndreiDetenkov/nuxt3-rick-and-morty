@@ -12,6 +12,7 @@
 - [Pinia](https://nuxt.com/modules/pinia) - intuitive, type safe, light and flexible Store for Vue
 - [Tailwindcss](https://nuxt.com/modules/tailwindcss) - a utility-first CSS framework
 - [ColorMode](https://nuxt.com/modules/color-mode) - dark and Light mode for Nuxt with auto detection
+- [Nuxt-Svgo](https://nuxt.com/modules/nuxt-svgo) - to load optimized SVG files as Vue components
 
 ### Setup
 

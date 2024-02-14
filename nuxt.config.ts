@@ -9,7 +9,11 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
+  modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-svgo'],
+
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+  },
 
   colorMode: {
     preference: 'system',
@@ -17,8 +21,9 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
 
-  tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
+  svgo: {
+    autoImportPath: '~/assets/icons/',
+    defaultImport: 'component',
   },
 
 })
