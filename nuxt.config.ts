@@ -11,14 +11,13 @@ export default defineNuxtConfig({
 
   modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-svgo'],
 
-  tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
-  },
-
   colorMode: {
     preference: 'system',
-    fallback: 'light',
     classSuffix: '',
+  },
+
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
   },
 
   svgo: {

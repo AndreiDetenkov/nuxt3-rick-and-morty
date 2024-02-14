@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <header>header</header>
+  <h1>Characters page</h1>
 </template>
