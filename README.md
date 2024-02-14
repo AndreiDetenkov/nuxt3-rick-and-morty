@@ -1,75 +1,32 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 - Rick and Morty Pages
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+### [RIck and Morty API Free by Axel Fuhrmann](https://rickandmortyapi.com/documentation/#introduction)
 
-## Setup
+### Features:
+
+- [Nuxt 3](https://nuxt.com/)
+- [@antfu/eslint-config](https://github.com/antfu/eslint-config)
+
+### Plugins:
+
+- [Pinia](https://nuxt.com/modules/pinia) - intuitive, type safe, light and flexible Store for Vue
+- [Tailwindcss](https://nuxt.com/modules/tailwindcss) - a utility-first CSS framework
+- [ColorMode](https://nuxt.com/modules/color-mode) - dark and Light mode for Nuxt with auto detection
+
+### Setup
 
 Make sure to install the dependencies:
 
 ```bash
-# npm
-npm install
-
 # pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+### Development Server
 
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
 # pnpm
 pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
