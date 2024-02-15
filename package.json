@@ -10,7 +10,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "release": "semantic-release"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
