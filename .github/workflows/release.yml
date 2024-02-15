@@ -20,12 +20,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20.x
+          cache: pnpm
+
+      - uses: pnpm/action-setup@v3
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Start Semantic Release
-        run: npm run release
-
-      # - uses: pnpm/action-setup@v3
-      #   name: Install pnpm
-      #   with:
-      #    version: 8
-      #     run_install: false
+        run: pnpm run release
