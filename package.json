@@ -39,6 +39,12 @@
   },
   "release": {
     "branches": ["main"],
-    "ci": false
+    "ci": false,
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ],
+    "repositoryUrl": "git@github.com:AndreiDetenkov/nuxt3-rick-and-morty.git"
   }
 }
