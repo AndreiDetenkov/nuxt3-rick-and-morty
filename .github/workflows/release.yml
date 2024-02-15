@@ -36,3 +36,5 @@ jobs:
 
       - name: Start Semantic Release
         run: pnpm release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
