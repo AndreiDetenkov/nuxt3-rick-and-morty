@@ -50,6 +50,7 @@
         "assets": ["package.json", "CHANGELOG.md"],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }]
-    ]
+    ],
+    "repositoryUrl": "git@github.com:AndreiDetenkov/nuxt3-rick-and-morty.git"
   }
 }
