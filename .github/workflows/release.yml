@@ -25,10 +25,7 @@ jobs:
         name: Install pnpm
         with:
           version: 8
-          run_install: false
-
-      - name: Install dependencies
-        run: pnpm install
+          run_install: true
 
       - name: Start Semantic Release
-        run: pnpm run release
+        run: pnpm release
