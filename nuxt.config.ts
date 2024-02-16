@@ -9,7 +9,13 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-svgo'],
+  modules: [
+    '@pinia/nuxt',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+    '@nuxt/image',
+    'nuxt-svgo',
+  ],
 
   colorMode: {
     preference: 'system',
