@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devtools: { enabled: true },
+
   css: ['~/assets/css/main.scss'],
 
   typescript: {
@@ -7,9 +9,12 @@ export default defineNuxtConfig({
     strict: true,
   },
 
-  devtools: { enabled: true },
-
-  modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-svgo'],
+  modules: [
+    '@pinia/nuxt',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+    'nuxt-svgo',
+  ],
 
   colorMode: {
     preference: 'system',
