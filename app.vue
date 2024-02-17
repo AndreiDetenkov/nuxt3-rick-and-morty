@@ -2,8 +2,8 @@
 import NavList from '~/components/Navigation.vue'
 import TheFooter from '~/components/TheFooter.vue'
 import TheHeader from '~/components/TheHeader.vue'
-import TheLogo from '~/components/TheLogo.vue'
-import ToggleColorMode from '~/components/ToggleColorMode.client.vue'
+import TheLogo from '~/components/TheLogo/TheLogo.vue'
+import ToggleColorMode from '~/components/ToggleColorMode/ToggleColorMode.client.vue'
 
 const colorMode = useColorMode()
 
