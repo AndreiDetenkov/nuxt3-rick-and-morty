@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import NavList from '~/components/Navigation.vue'
+import Navigation from '~/components/Navigation.vue'
 import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader.vue'
+import TheHeader from '~/components/TheHeader/TheHeader.vue'
 import TheLogo from '~/components/TheLogo/TheLogo.vue'
 import ToggleColorMode from '~/components/ToggleColorMode/ToggleColorMode.client.vue'
 
@@ -25,7 +25,7 @@ function toggleColorMode(preference: string) {
       </template>
 
       <template #nav>
-        <NavList />
+        <Navigation />
         <ToggleColorMode :is-dark-mode="isDarkMode" @toggle-color-mode="toggleColorMode" />
       </template>
     </TheHeader>
