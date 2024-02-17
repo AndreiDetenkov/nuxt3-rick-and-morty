@@ -10,10 +10,11 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    'nuxt-svgo',
     '@pinia/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
-    'nuxt-svgo',
+    '@nuxt/test-utils/module',
   ],
 
   colorMode: {
