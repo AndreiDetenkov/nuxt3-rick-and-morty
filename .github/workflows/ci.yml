@@ -1,16 +1,15 @@
-name: Release
+name: CI
 
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
+  #  pull_request:
+  #    branches: [main]
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
-  semantic-release:
+  ci:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,8 +31,11 @@ jobs:
       - name: Install dependencies
         run: pnpm i
 
-      - name: Eslint fix
-        run: pnpm lint:fix
+      - name: Checking Eslint
+        run: pnpm lint
+
+      - name: Run tests
+        run: pnpm test
 
 #      - name: Start Semantic Release
 #        run: pnpm release
