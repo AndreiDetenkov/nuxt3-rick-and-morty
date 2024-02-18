@@ -3,6 +3,14 @@
   "type": "module",
   "version": "1.1.0",
   "private": true,
+  "author": {
+    "name": "Andrei Detenkov",
+    "email": "a.detenkov@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AndreiDetenkov/nuxt3-rick-and-morty.git"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -11,7 +19,7 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "release": "semantic-release",
+    "release": "npx changelogen@latest --release --push",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
