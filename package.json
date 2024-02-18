@@ -26,7 +26,6 @@
     "@nuxtjs/color-mode": "^3.3.2",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@pinia/testing": "^0.1.3",
-    "@semantic-release/git": "^10.0.1",
     "@vitest/coverage-v8": "^1.3.0",
     "@vitest/ui": "^1.3.0",
     "@vue/test-utils": "^2.4.4",
@@ -37,7 +36,6 @@
     "nuxt-svgo": "^4.0.0",
     "playwright-core": "^1.41.2",
     "sass": "^1.70.0",
-    "semantic-release": "^23.0.2",
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.3.3",
     "vitest": "^1.3.0",
@@ -48,27 +46,5 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
-  },
-  "release": {
-    "branches": [
-      "main"
-    ],
-    "ci": false,
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/github",
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "package.json",
-            "CHANGELOG.md"
-          ],
-          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-        }
-      ]
-    ],
-    "repositoryUrl": "git@github.com:AndreiDetenkov/nuxt3-rick-and-morty.git"
   }
 }
