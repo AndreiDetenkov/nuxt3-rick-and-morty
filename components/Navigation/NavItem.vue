@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import type { NavItem } from '~/components/Navigation/NavItem.interface'
+import type { NavItemProps } from '~/components/Navigation/types'
 
-defineProps<{
-  item: NavItem
-}>()
+defineProps<NavItemProps>()
 </script>
 
 <template>
   <NuxtLink
+    data-test="nav-item"
     :to="item.path"
     class="
       text-lg
