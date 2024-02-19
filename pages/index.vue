@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import { useCharactersStore } from '~/stores/characters'
+
+const store = useCharactersStore()
+store.getCharactersByIds()
 </script>
 
 <template>
-  <section id="hero" class="h-[calc(50vh_-_60px)]">
+  <section id="hero" class="h-[calc(50vh)] py-4">
     <div class="relative grid place-items-center h-full">
       <h1
         class="z-10 text-center text-5xl font-black text-title dark:text-primary-light sm:text-6xl md:text-7xl lg:text-8xl"
