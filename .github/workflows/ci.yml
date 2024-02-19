@@ -3,13 +3,13 @@ name: CI
 on:
   push:
     branches: [main]
-  #  pull_request:
-  #    branches: [main]
+  pull_request:
+    branches: [main]
 
   workflow_dispatch:
 
 jobs:
-  ci:
+  lint-and-test:
     runs-on: ubuntu-latest
 
     steps:
