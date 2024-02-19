@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/test-utils/module',
+    '@nuxt/image',
   ],
 
   colorMode: {
