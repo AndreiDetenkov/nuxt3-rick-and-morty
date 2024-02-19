@@ -4,6 +4,13 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.scss'],
 
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+
   typescript: {
     typeCheck: false,
     strict: true,
@@ -12,7 +19,6 @@ export default defineNuxtConfig({
   modules: [
     'nuxt-svgo',
     '@pinia/nuxt',
-    '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxt/test-utils/module',
   ],
@@ -20,10 +26,6 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'system',
     classSuffix: '',
-  },
-
-  tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
   },
 
   svgo: {

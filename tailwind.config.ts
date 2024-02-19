@@ -2,7 +2,13 @@ import type { Config } from 'tailwindcss'
 
 export default <Partial<Config>>{
   darkMode: 'class',
-  content: [],
+  content: [
+    './components/**/*.vue',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './app.vue',
+    './error.vue',
+  ],
   theme: {
     container: {
       center: true,
