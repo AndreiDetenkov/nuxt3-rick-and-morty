@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useCharactersStore } from '~/stores/characters'
+import CharacterCard from '~/components/Card/CharacterCard.vue'
 
 const store = useCharactersStore()
 store.getCharactersByIds()
@@ -17,5 +18,9 @@ store.getCharactersByIds()
         <svgo-hero :font-controlled="false" class="h-full w-full fill-primary-lighter dark:fill-primary-light/20" />
       </div>
     </div>
+  </section>
+
+  <section class="grid sm:grid-cols-2 2xl:grid-cols-3 gap-8">
+    <CharacterCard v-for="character in store.characters" :key="character.id.toString()" :character="character" />
   </section>
 </template>
