@@ -1,4 +1,33 @@
 
+## v1.2.0
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v1.1.1...v1.2.0)
+
+### 🚀 Enhancements
+
+- Get characters by random ids ([abf3890](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/abf3890))
+- Implement character card ([b87df43](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/b87df43))
+- Implement live indicator, small updates ([2afa9a6](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/2afa9a6))
+
+### 🏡 Chore
+
+- Replace tailwind css from module to lib ([8253c83](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/8253c83))
+- Update ci.yml file ([9e70d85](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/9e70d85))
+- Install @nuxt/image module ([d20c161](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/d20c161))
+
+### ✅ Tests
+
+- Add tests for navigation ([d2bd2a6](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/d2bd2a6))
+
+### 🎨 Styles
+
+- Styling toggle btn ([c18db9f](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/c18db9f))
+- Styling of character card ([6699a5d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/6699a5d))
+
+### ❤️ Contributors
+
+- AndreiDetenkov
+
 ## v1.1.1
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v1.1.0...v1.1.1)
