@@ -1,6 +1,12 @@
+<script setup lang="ts">
+import TheContainer from '~/components/TheContainer.vue'
+</script>
+
 <template>
-  <header class="relative flex min-h-[60px] w-full flex-row items-center justify-between">
-    <slot name="logo" />
-    <slot name="nav" />
-  </header>
+  <TheContainer>
+    <header class="relative flex min-h-[60px] w-full flex-row items-center justify-between">
+      <slot name="logo" />
+      <slot name="nav" />
+    </header>
+  </TheContainer>
 </template>

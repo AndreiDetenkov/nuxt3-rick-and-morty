@@ -1,10 +1,6 @@
 <script setup lang="ts">
-import { useCharactersStore } from '~/stores/characters'
-import CharacterCard from '~/components/Card/CharacterCard.vue'
 import HeroSection from '~/components/HeroSection.vue'
-
-const store = useCharactersStore()
-store.getCharactersByIds()
+import CharactersSection from '~/pages/CharactersSection.vue'
 </script>
 
 <template>
@@ -12,11 +8,7 @@ store.getCharactersByIds()
     <HeroSection />
   </section>
 
-  <section class="grid sm:grid-cols-2 gap-8">
-    <CharacterCard
-      v-for="character in store.characters"
-      :key="character.id.toString()"
-      :character="character"
-    />
+  <section class="bg-primary-darker py-20">
+    <CharactersSection />
   </section>
 </template>

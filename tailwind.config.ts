@@ -10,10 +10,6 @@ export default <Partial<Config>>{
     './error.vue',
   ],
   theme: {
-    container: {
-      center: true,
-      padding: '1rem',
-    },
     extend: {
       colors: {
         'title': '#202329',
