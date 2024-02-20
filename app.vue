@@ -18,7 +18,7 @@ function toggleColorMode(preference: string) {
 
 <template>
   <NuxtLoadingIndicator />
-  <div class="h-dvh flex flex-col">
+  <div class="h-dvh w-dvw flex flex-col">
     <TheHeader>
       <template #logo>
         <TheLogo />

@@ -28,7 +28,7 @@ export const useCharactersStore = defineStore('characters', {
       }
     },
 
-    async getCharactersByIds(): Promise<void> {
+    async getRandomCharacters(): Promise<void> {
       try {
         const ids: number[] = generateRandomNumbers()
         this.characters = await $fetch(`https://rickandmortyapi.com/api/character/${ids}`)

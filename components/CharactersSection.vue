@@ -3,7 +3,7 @@ import CharacterCard from '~/components/Card/CharacterCard.vue'
 import { useCharactersStore } from '~/stores/characters.js'
 
 const store = useCharactersStore()
-store.getCharactersByIds()
+store.getRandomCharacters()
 </script>
 
 <template>
