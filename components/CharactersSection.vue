@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import CharacterCard from '~/components/Card/CharacterCard.vue'
+import TheContainer from '~/components/TheContainer.vue'
 import { useCharactersStore } from '~/stores/characters.js'
 
 const store = useCharactersStore()
