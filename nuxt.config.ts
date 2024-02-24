@@ -17,11 +17,11 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    'nuxt-svgo',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/test-utils/module',
     '@nuxt/image',
+    'nuxt-svgo',
   ],
 
   colorMode: {
