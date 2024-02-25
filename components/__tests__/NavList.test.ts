@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { shallowMount } from '@vue/test-utils'
-import NavList from '~/components/Navigation/NavList.vue'
+import NavList from '~/components/NavList.vue'
 
 describe('navList component', () => {
   it('should render nav list', () => {

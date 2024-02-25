@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import NavigationList from '~/components/Navigation/NavList.vue'
-import type { NavItem } from '~/components/Navigation/types'
+import NavigationList from '~/components/NavList.vue'
+import type { NavItem } from '~/components/types'
 
 const navList: NavItem[] = [
   {

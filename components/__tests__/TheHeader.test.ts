@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
-import TheHeader from '~/components/TheHeader/TheHeader.vue'
+import TheHeader from '~/components/TheHeader.vue'
 
 describe('theHeader components', () => {
   it('should render the header', () => {

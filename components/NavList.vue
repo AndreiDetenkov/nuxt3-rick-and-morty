@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import NavigationItem from '~/components/Navigation/NavItem.vue'
-import type { NavListProps } from '~/components/Navigation/types'
+import NavigationItem from '~/components/NavItem.vue'
+import type { NavListProps } from '~/components/types'
 
 defineProps<NavListProps>()
 </script>

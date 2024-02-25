@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavItemProps } from '~/components/Navigation/types'
+import type { NavItemProps } from '~/components/types'
 
 defineProps<NavItemProps>()
 </script>

@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest'
 import { enableAutoUnmount, mount } from '@vue/test-utils'
-import ToggleColorMode from '~/components/ToggleColorMode/ToggleColorMode.client.vue'
+import ToggleColorMode from '~/components/ToggleColorMode.client.vue'
 
 function factory(args?: any) {
   return mount(ToggleColorMode, {

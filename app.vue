@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Navigation from '~/components/Navigation/Navigation.vue'
+import Navigation from '~/components/Navigation.vue'
 import TheFooter from '~/components/TheFooter.vue'
-import TheHeader from '~/components/TheHeader/TheHeader.vue'
-import TheLogo from '~/components/TheLogo/TheLogo.vue'
-import ToggleColorMode from '~/components/ToggleColorMode/ToggleColorMode.client.vue'
+import TheHeader from '~/components/TheHeader.vue'
+import TheLogo from '~/components/TheLogo.vue'
+import ToggleColorMode from '~/components/ToggleColorMode.client.vue'
 
 const colorMode = useColorMode()
 
