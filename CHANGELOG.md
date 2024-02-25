@@ -1,4 +1,35 @@
 
+## v1.3.0
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v1.2.0...v1.3.0)
+
+### 🚀 Enhancements
+
+- Add seo tags on the main page ([656bc96](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/656bc96))
+- Add page with character card ([906d5ea](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/906d5ea))
+- Implement loading page and seo meta ([b12dffd](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/b12dffd))
+
+### 💅 Refactors
+
+- Create character info component ([31e00af](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/31e00af))
+- Update components structure ([08fd03b](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/08fd03b))
+
+### 🏡 Chore
+
+- Add workflow status badge ([239ead4](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/239ead4))
+
+### ✅ Tests
+
+- Refactor the header test ([b5c8172](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/b5c8172))
+
+### 🎨 Styles
+
+- Add border bottom to the sections ([1987a6e](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/1987a6e))
+
+### ❤️ Contributors
+
+- AndreiDetenkov
+
 ## v1.2.0
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v1.1.1...v1.2.0)
