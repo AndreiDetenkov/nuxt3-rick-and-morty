@@ -18,7 +18,7 @@ useSeoMeta({
     <HeroSection />
   </section>
 
-  <section class="bg-primary-darker py-20">
+  <section class="py-20">
     <CharactersSection />
   </section>
 </template>
