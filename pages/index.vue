@@ -14,11 +14,11 @@ useSeoMeta({
 </script>
 
 <template>
-  <section class="h-[calc(40vh)] py-4">
+  <section class="h-[calc(40vh)] py-4 border-b dark:border-b-primary">
     <HeroSection />
   </section>
 
-  <section class="py-20">
+  <section class="py-20 border-b dark:border-b-primary">
     <CharactersSection />
   </section>
 </template>
