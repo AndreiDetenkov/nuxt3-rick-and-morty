@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import CloseButton from '~/pages/character/CloseButton.vue'
+
 const route = useRoute()
 const store = useCharactersStore()
 
@@ -11,17 +13,16 @@ useSeoMeta({
 })
 
 store.getCharacterById(Number(route.params.id))
-
-const { character, isLoading } = storeToRefs(store)
 </script>
 
 <template>
-  <Loading v-if="isLoading" />
+  <Loading v-if="store.isLoading" />
   <TheContainer v-else>
     <section
-      class="mx-auto mt-7 flex w-full flex-col items-center rounded-xl border p-7 md:w-2/3 lg:w-1/2 xl:w-1/3"
+      class="mx-auto mt-7 flex w-full flex-col items-center rounded-xl border p-7 md:w-2/3 lg:w-1/2 xl:w-1/3 relative"
     >
-      <CharacterInfo :character="character" />
+      <CloseButton class="absolute -top-4 -right-4" @click="$router.back()" />
+      <CharacterInfo :character="store.character" />
     </section>
   </TheContainer>
 </template>
