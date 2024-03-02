@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import { useCharactersStore } from '~/stores/characters'
+useSeoMeta({
+  title: 'Rick and Morty - Characters Page',
+  ogTitle: 'Rick and Morty - Characters Page',
+  description: 'Rick and Morty Api all characters',
+  ogDescription: 'Rick and Morty Api all characters',
+  ogImage: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
+})
 
-const page = ref(2)
+const page = ref(1)
 
 const store = useCharactersStore()
 store.getCharactersByPage(page.value)
