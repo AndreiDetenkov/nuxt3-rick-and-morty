@@ -15,12 +15,12 @@ store.getCharactersByPage(page.value)
 
 <template>
   <section class="py-10">
-    <CharactersSection>
+    <SectionCharacters>
       <CharacterCard
         v-for="character in store.characters"
         :key="character.id.toString()"
         :character="character"
       />
-    </CharactersSection>
+    </SectionCharacters>
   </section>
 </template>

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { Character } from '~/stores/types'
-import LiveIndicator from '~/components/LiveIndicator.vue'
 
 const props = defineProps<{ character: Character }>()
 

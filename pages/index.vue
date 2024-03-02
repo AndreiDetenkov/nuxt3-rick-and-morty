@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import HeroSection from '~/components/HeroSection.vue'
-import CharactersSection from '~/components/CharactersSection.vue'
-import CharacterCard from '~/components/CharacterCard.vue'
-
 useSeoMeta({
   title: 'Rick and Morty - Main Page',
   ogTitle: 'Rick and Morty - Main Page',
@@ -17,16 +13,16 @@ store.getRandomCharacters()
 
 <template>
   <section class="h-[calc(40vh)] py-4 border-b dark:border-b-primary">
-    <HeroSection />
+    <SectionHero />
   </section>
 
   <section class="py-20 border-b dark:border-b-primary">
-    <CharactersSection>
+    <SectionCharacters>
       <CharacterCard
         v-for="character in store.characters"
         :key="character.id.toString()"
         :character="character"
       />
-    </CharactersSection>
+    </SectionCharacters>
   </section>
 </template>

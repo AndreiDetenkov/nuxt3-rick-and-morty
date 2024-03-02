@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import type { Character } from '~/stores/types'
-import CharacterInfoLocationLink from '~/components/CharacterInfoLocationLink.vue'
-import CharacterInfoEpisodeLink from '~/components/CharacterInfoEpisodeLink.vue'
 
 const props = defineProps<{
   character: Character
