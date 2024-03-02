@@ -2,6 +2,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  modules: [
+    '@pinia/nuxt',
+    '@nuxtjs/color-mode',
+    '@nuxt/test-utils/module',
+    '@nuxt/image',
+    'nuxt-svgo',
+  ],
+
   css: ['~/assets/css/main.scss'],
 
   postcss: {
@@ -15,14 +23,6 @@ export default defineNuxtConfig({
     typeCheck: false,
     strict: true,
   },
-
-  modules: [
-    '@pinia/nuxt',
-    '@nuxtjs/color-mode',
-    '@nuxt/test-utils/module',
-    '@nuxt/image',
-    'nuxt-svgo',
-  ],
 
   colorMode: {
     preference: 'system',
