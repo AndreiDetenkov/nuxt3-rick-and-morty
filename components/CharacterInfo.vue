@@ -26,11 +26,19 @@ const episodes = computed<string[]>(() => {
     {{ name }}
   </h2>
 
-  <ul class="text-xl mb-4 space-y-1">
-    <li>Status: {{ status }}</li>
-    <li>Species: {{ species }}</li>
-    <li>Type: {{ type ? type : 'unknown' }}</li>
-    <li>Gender: {{ gender }}</li>
+  <ul class="text-xl mb-4 space-y-2">
+    <li class="flex items-center">
+      <svgo-pulse class="h-6 w-6 mr-2 fill-primary-light" /> Status: {{ status }}
+    </li>
+    <li class="flex items-center">
+      <svgo-location class="h-6 w-6 mr-2 fill-primary-light" /> Species: {{ species }}
+    </li>
+    <li class="flex items-center">
+      <svgo-account class="h-6 w-6 mr-2 fill-primary-light" /> Type: {{ type ? type : 'unknown' }}
+    </li>
+    <li class="flex items-center">
+      <svgo-gender class="h-6 w-6 mr-2 fill-primary-light" /> Gender: {{ gender }}
+    </li>
   </ul>
 
   <p class="text-2xl text-center mb-4 font-bold transition-colors duration-300 hover:text-orange-400">
