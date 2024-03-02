@@ -8,6 +8,13 @@ store.getCharactersByPage(page.value)
 </script>
 
 <template>
-  <h1>Characters page</h1>
-  <pre>{{ store.characters }}</pre>
+  <section class="py-10">
+    <CharactersSection>
+      <CharacterCard
+        v-for="character in store.characters"
+        :key="character.id.toString()"
+        :character="character"
+      />
+    </CharactersSection>
+  </section>
 </template>
