@@ -4,6 +4,6 @@ const route = useRoute()
 
 <template>
   <TheContainer>
-    <h1>Location - {{ route.params.id }}</h1>
+    <h1>Episode - {{ route.params.id }}</h1>
   </TheContainer>
 </template>

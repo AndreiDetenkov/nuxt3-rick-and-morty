@@ -59,7 +59,7 @@ const location = computed<LocationProp>(() => {
         <p class="text text-primary-light mb-1">
           First seen in:
         </p>
-        <NuxtLink to="/">
+        <NuxtLink :to="`/episode/${episode}`">
           <h2 class="text-md text-light-gray transition-colors duration-300 hover:text-orange-400">
             episode: {{ episode }}
           </h2>
