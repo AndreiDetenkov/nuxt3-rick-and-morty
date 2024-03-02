@@ -1,4 +1,37 @@
 
+## v1.4.0
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v1.3.0...v1.4.0)
+
+### 🚀 Enhancements
+
+- Add close button for the character card ([3082e58](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/3082e58))
+- Add icons ([b224ca0](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/b224ca0))
+- Implement characters cards on the characters page ([c892688](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/c892688))
+- Implement seo meta tags ([fd5fa35](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/fd5fa35))
+- Add link icons into footer ([6a08c2d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/6a08c2d))
+- Implement redirect links to location page ([be9c6f8](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/be9c6f8))
+- Implement redirect links to episode page ([aed02d6](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/aed02d6))
+
+### 💅 Refactors
+
+- Reorganize structure ([b20662b](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/b20662b))
+- Divide character info card into separate components ([a3ccdd4](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/a3ccdd4))
+- Reorganize structure ([b15dd8d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/b15dd8d))
+
+### 🏡 Chore
+
+- Move modules up ([652919a](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/652919a))
+
+### 🎨 Styles
+
+- Update icons styling ([f89e38b](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/f89e38b))
+- Update styles ([a95fcb2](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/a95fcb2))
+
+### ❤️ Contributors
+
+- AndreiDetenkov
+
 ## v1.3.0
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v1.2.0...v1.3.0)
