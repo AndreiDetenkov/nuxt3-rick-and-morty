@@ -1,11 +1,18 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import type { Character } from '~/stores/types'
+import type { LocationProp } from '~/components/types'
 
 const props = defineProps<{ character: Character }>()
 
-const episode = computed(() => {
+const episode = computed<string>(() => {
   return props.character.episode[0].split('/').slice(-1).join('')
+})
+
+const location = computed<LocationProp>(() => {
+  return {
+    id: props.character.location.url.split('/').slice(-1).join(''),
+    name: props.character.location.name,
+  }
 })
 </script>
 
@@ -41,9 +48,9 @@ const episode = computed(() => {
         <p class="text text-primary-light mb-1">
           Last known location:
         </p>
-        <NuxtLink to="/">
+        <NuxtLink :to="`/location/${location.id}`">
           <h2 class="text-md text-light-gray transition-colors duration-300 hover:text-orange-400">
-            {{ character.location.name }}
+            {{ location.name }}
           </h2>
         </NuxtLink>
       </section>

@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { Character } from '~/stores/types'
+import type { LocationProp } from '~/components/types'
 
 const props = defineProps<{
   character: Character
@@ -7,9 +9,14 @@ const props = defineProps<{
 
 const { name, image, status, species, type, gender, location, episode } = toRefs(props.character)
 
-const locationName = computed<string>(() => location.value.name)
+const locationProp = computed<LocationProp>(() => {
+  return {
+    name: location.value.name,
+    id: location.value.url.split('/').slice(-1).join(''),
+  }
+})
 
-const episodes = computed<string[]>(() => {
+const episodesProp = computed<string[]>(() => {
   return episode.value.map((item: string) =>
     item.split('/').slice(-1).join(''),
   )
@@ -23,7 +30,7 @@ const episodes = computed<string[]>(() => {
 
   <CharacterInfoList :list="{ status, species, type, gender }" />
 
-  <CharacterInfoLocationLink :location-name="locationName" />
+  <CharacterInfoLocationLink :location="locationProp" />
 
-  <CharacterInfoEpisodeLink :episodes="episodes" />
+  <CharacterInfoEpisodeLink :episodes="episodesProp" />
 </template>
