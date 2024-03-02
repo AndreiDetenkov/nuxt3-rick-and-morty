@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+defineEmits(['onClick'])
 </script>
 
 <template>
@@ -22,6 +22,7 @@
       hover:bg-orange-400
       dark:hover:bg-orange-400
       transition duration-300"
+    @click="$emit('onClick')"
   >
     X
   </div>

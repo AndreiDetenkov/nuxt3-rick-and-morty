@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import CloseButton from '~/pages/character/CloseButton.vue'
-
 const route = useRoute()
 const store = useCharactersStore()
 
@@ -21,7 +19,7 @@ store.getCharacterById(Number(route.params.id))
     <section
       class="mx-auto mt-7 flex w-full flex-col items-center rounded-xl border p-7 md:w-2/3 lg:w-1/2 xl:w-1/3 relative"
     >
-      <CloseButton class="absolute -top-4 -right-4" @click="$router.back()" />
+      <CloseButton class="absolute -top-4 -right-4" @on-click="$router.back()" />
       <CharacterInfo :character="store.character" />
     </section>
   </TheContainer>
