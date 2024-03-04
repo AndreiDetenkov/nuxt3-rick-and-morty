@@ -1,4 +1,26 @@
 
+## v1.4.1
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v1.4.0...v1.4.1)
+
+### 💅 Refactors
+
+- Update imports ([94c24aa](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/94c24aa))
+
+### ✅ Tests
+
+- Add test for close button component ([d6c84f3](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/d6c84f3))
+- Add tests ([ab35f3c](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/ab35f3c))
+- Add tests ([d0f214a](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/d0f214a))
+
+### 🎨 Styles
+
+- Update styleing ([a2f0ad0](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/a2f0ad0))
+
+### ❤️ Contributors
+
+- AndreiDetenkov
+
 ## v1.4.0
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v1.3.0...v1.4.0)
