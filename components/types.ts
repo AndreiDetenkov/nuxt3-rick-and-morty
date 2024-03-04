@@ -13,6 +13,13 @@ export interface NavItemProps {
   item: NavItem
 }
 
+export interface CharacterInfoListProp {
+  status: string
+  species: string
+  type: string
+  gender: string
+}
+
 export interface LocationProp extends Pick<CharacterLocation, 'name'> {
   id: string
 }

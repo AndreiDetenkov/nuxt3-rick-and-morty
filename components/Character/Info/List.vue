@@ -1,13 +1,8 @@
 <script setup lang="ts">
-interface ListProps {
-  status: string
-  species: string
-  type: string
-  gender: string
-}
+import type { CharacterInfoListProp } from '~/components/types'
 
 defineProps<{
-  list: ListProps
+  list: CharacterInfoListProp
 }>()
 </script>
 

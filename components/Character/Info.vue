@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import type { Character } from '~/stores/types'
 import type { LocationProp } from '~/components/types'
 
@@ -24,13 +23,11 @@ const episodesProp = computed<string[]>(() => {
 </script>
 
 <template>
-  <lazy-nuxt-img :src="image" class="mb-8 h-auto w-80 rounded-2xl" />
-
-  <CharacterInfoTitle :name="name" />
-
-  <CharacterInfoList :list="{ status, species, type, gender }" />
-
-  <CharacterInfoLocationLink :location="locationProp" />
-
-  <CharacterInfoEpisodeLink :episodes="episodesProp" />
+  <div data-test="info">
+    <lazy-nuxt-img :src="image" class="mb-8 h-auto w-80 rounded-2xl" />
+    <CharacterInfoTitle :name="name" />
+    <CharacterInfoList :list="{ status, species, type, gender }" />
+    <CharacterInfoLocationLink :location="locationProp" />
+    <CharacterInfoEpisodeLink :episodes="episodesProp" />
+  </div>
 </template>
