@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import NavigationList from '~/components/NavList.vue'
 import type { NavItem } from '~/components/types'
 
 const navList: NavItem[] = [
@@ -12,6 +11,6 @@ const navList: NavItem[] = [
 
 <template>
   <nav data-test="nav" class="flex items-center space-x-6">
-    <NavigationList :list="navList" />
+    <NavList :list="navList" />
   </nav>
 </template>

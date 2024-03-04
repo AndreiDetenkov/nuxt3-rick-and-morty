@@ -3,7 +3,7 @@ defineEmits(['onClick'])
 </script>
 
 <template>
-  <div
+  <button
     class="
       w-10
       h-10
@@ -25,5 +25,5 @@ defineEmits(['onClick'])
     @click="$emit('onClick')"
   >
     X
-  </div>
+  </button>
 </template>

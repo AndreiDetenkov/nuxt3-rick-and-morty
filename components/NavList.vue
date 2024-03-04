@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import NavigationItem from '~/components/NavItem.vue'
 import type { NavListProps } from '~/components/types'
 
 defineProps<NavListProps>()
@@ -7,7 +6,7 @@ defineProps<NavListProps>()
 
 <template>
   <ul data-test="nav-list" class="flex flex-row items-center justify-between space-x-7">
-    <NavigationItem
+    <NavItem
       v-for="(item, index) in list"
       :key="`nav-item-${index}`"
       data-test="nav-item"
