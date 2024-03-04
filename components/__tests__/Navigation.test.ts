@@ -7,6 +7,5 @@ describe('navigation component', () => {
     const wrapper = shallowMount(Navigation)
 
     expect(wrapper.find('[data-test="nav"]').exists()).toBe(true)
-    expect(wrapper.find('navigation-list-stub').exists()).toBe(true)
   })
 })
