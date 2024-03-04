@@ -5,7 +5,7 @@ export default defineVitestConfig({
     environment: 'nuxt',
     coverage: {
       exclude: ['**/node_modules/**'],
-      include: ['**/components/**'],
+      include: ['**/components/**/*.vue'],
     },
   },
 })

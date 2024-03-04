@@ -2,15 +2,15 @@
 </script>
 
 <template>
-  <div class="bg-neutral-800 fixed top-0 left-0 w-full h-full z-[100]">
+  <div data-test="loading" class="bg-neutral-800 fixed top-0 left-0 w-full h-full z-[100]">
     <div class="loading-text">
-      <span class="loading-text-words">L</span>
-      <span class="loading-text-words">O</span>
-      <span class="loading-text-words">A</span>
-      <span class="loading-text-words">D</span>
-      <span class="loading-text-words">I</span>
-      <span class="loading-text-words">N</span>
-      <span class="loading-text-words">G</span>
+      <span data-test="loading-text" class="loading-text-words">L</span>
+      <span data-test="loading-text" class="loading-text-words">O</span>
+      <span data-test="loading-text" class="loading-text-words">A</span>
+      <span data-test="loading-text" class="loading-text-words">D</span>
+      <span data-test="loading-text" class="loading-text-words">I</span>
+      <span data-test="loading-text" class="loading-text-words">N</span>
+      <span data-test="loading-text" class="loading-text-words">G</span>
     </div>
   </div>
 </template>

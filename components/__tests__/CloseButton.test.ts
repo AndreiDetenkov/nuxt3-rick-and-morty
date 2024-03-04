@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { shallowMount } from '@vue/test-utils'
 import CloseButton from '@/components/CloseButton.vue'
 
-describe('closeButton', () => {
+describe('closeButton component', () => {
   it('should render correctly', () => {
     const wrapper = shallowMount(CloseButton)
 
