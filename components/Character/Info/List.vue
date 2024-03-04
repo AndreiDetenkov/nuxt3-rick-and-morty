@@ -18,7 +18,7 @@ defineProps<{
     </li>
     <li class="flex items-center">
       <svgo-account class="h-6 w-6 mr-2 fill-primary-light" />
-      Type: {{ list.type ? list.type : 'unknown' }}
+      Type: {{ list.type }}
     </li>
     <li class="flex items-center">
       <svgo-gender class="h-6 w-6 mr-2 fill-primary-light" />

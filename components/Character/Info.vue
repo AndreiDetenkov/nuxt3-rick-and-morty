@@ -23,7 +23,7 @@ const episodesProp = computed<string[]>(() => {
 </script>
 
 <template>
-  <div data-test="info">
+  <div data-test="info" class="w-full flex flex-col items-center">
     <lazy-nuxt-img :src="image" class="mb-8 h-auto w-80 rounded-2xl" />
     <CharacterInfoTitle :name="name" />
     <CharacterInfoList :list="{ status, species, type, gender }" />
