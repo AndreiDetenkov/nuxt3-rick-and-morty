@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Character } from '~/stores/types'
-import type { LocationProp } from '~/components/types'
+import type { LocationProp } from '~/utils/types'
 
 const props = defineProps<{
   character: Character

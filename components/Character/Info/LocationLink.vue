@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { LocationProp } from '~/components/types'
+import type { LocationProp } from '~/utils/types'
 
 defineProps<{ location: LocationProp }>()
 </script>

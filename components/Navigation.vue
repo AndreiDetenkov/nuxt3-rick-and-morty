@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavItem } from '~/components/types'
+import type { NavItem } from '~/utils/types'
 
 const navList: NavItem[] = [
   {
