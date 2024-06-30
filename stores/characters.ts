@@ -15,7 +15,7 @@ export const useCharactersStore = defineStore('characters', {
   state: () => ({
     characters: [] as Character[],
     character: {} as Character,
-    pageInfo: {},
+    pageInfo: {} as Info,
     error: '',
     isLoading: false,
   }),
