@@ -12,7 +12,7 @@ store.getRandomCharacters()
 </script>
 
 <template>
-  <section class="h-[calc(40vh)] py-4 border-b dark:border-b-primary">
+  <section class="h-[calc(40vh)] pt-4 border-b dark:border-b-primary">
     <SectionHero />
   </section>
 
