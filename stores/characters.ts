@@ -5,9 +5,6 @@ import { generateRandomNumbers } from '~/utils/randomNumbers'
 interface ResponseInterface {
   info: Info
   results: Character[]
-  character: Character
-  error: string
-  isLoading: boolean
 }
 
 const baseUrl = 'https://rickandmortyapi.com/api'

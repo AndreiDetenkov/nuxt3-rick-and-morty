@@ -1,4 +1,9 @@
 <script setup lang="ts">
+defineProps<{
+  pages: number
+  page: number
+}>()
+
 const emit = defineEmits<{
   (e: 'prev'): void
   (e: 'next'): void
@@ -6,6 +11,7 @@ const emit = defineEmits<{
 </script>
 
 <template>
+  {{ page }}
   <nav aria-label="pagination">
     <ul class="inline-flex -space-x-px text-base h-10">
       <li>

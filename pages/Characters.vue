@@ -32,16 +32,12 @@ function nextAction() {
 <template>
   <Loading v-if="isLoading" />
   <section v-else class="py-10">
-    <SectionCharacters class="mb-10">
-      <CharacterCard
-        v-for="character in characters"
-        :key="character.id.toString()"
-        :character="character"
-      />
-    </SectionCharacters>
+    <TheContainer class="grid md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-4 xl:gap-6 mb-10">
+      <CharacterCard v-for="character in characters" :key="character.id.toString()" :character="character" />
+    </TheContainer>
 
     <TheContainer class="flex justify-center">
-      <ThePagination @prev="prevAction" @next="nextAction" />
+      <ThePagination :page="page" :pages="pageInfo.pages" @prev="prevAction" @next="nextAction" />
     </TheContainer>
   </section>
 </template>
