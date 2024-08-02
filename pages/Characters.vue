@@ -7,37 +7,37 @@ useSeoMeta({
   ogImage: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
 })
 
-const page = ref(1)
-
 const store = useCharactersStore()
-const { characters, pageInfo, isLoading } = storeToRefs(store)
 
-onMounted(() => store.getCharactersByPage(page.value))
+store.getCharactersByPage(1)
 
-function prevAction() {
-  if (page.value > 1) {
-    page.value--
-    store.getCharactersByPage(page.value)
-  }
+function onPrevHandler(page: number): void {
+  store.getCharactersByPage(page)
 }
 
-function nextAction() {
-  if (pageInfo.value.next) {
-    page.value++
-    store.getCharactersByPage(page.value)
-  }
+function onNextHandler(page: number): void {
+  store.getCharactersByPage(page)
 }
 </script>
 
 <template>
-  <Loading v-if="isLoading" />
-  <section v-else class="py-10">
+  <Loading v-if="store.isLoading" />
+
+  <div v-else class="py-10">
     <TheContainer class="grid md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-4 xl:gap-6 mb-10">
-      <CharacterCard v-for="character in characters" :key="character.id.toString()" :character="character" />
+      <CharacterCard
+        v-for="character in store.characters"
+        :key="character.id.toString()"
+        :character="character"
+      />
     </TheContainer>
 
     <TheContainer class="flex justify-center">
-      <ThePagination :page="page" :pages="pageInfo.pages" @prev="prevAction" @next="nextAction" />
+      <ThePagination
+        :pages="store.pageInfo.pages"
+        @prev="onPrevHandler"
+        @next="onNextHandler"
+      />
     </TheContainer>
-  </section>
+  </div>
 </template>
