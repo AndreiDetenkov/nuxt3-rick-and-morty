@@ -2,8 +2,8 @@
 useSeoMeta({
   title: 'Rick and Morty - Characters Page',
   ogTitle: 'Rick and Morty - Characters Page',
-  description: 'Rick and Morty Api all characters',
-  ogDescription: 'Rick and Morty Api all characters',
+  description: 'Rick and Morty all characters',
+  ogDescription: 'Rick and Morty all characters',
   ogImage: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
 })
 
