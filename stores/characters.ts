@@ -43,7 +43,7 @@ export const useCharactersStore = defineStore('characters', {
       try {
         this.isLoading = true
         const ids: number[] = generateRandomNumbers()
-        this.characters = await $fetch(`${baseUrl}/character/${ids}`)
+        this.characters = await $fetch<Character[]>(`${baseUrl}/character/${ids}`)
       }
       catch (error) {
         if (error instanceof Error)
@@ -59,7 +59,7 @@ export const useCharactersStore = defineStore('characters', {
 
       try {
         this.isLoading = true
-        this.character = await $fetch(`${baseUrl}/character/${id}`)
+        this.character = await $fetch<Character>(`${baseUrl}/character/${id}`)
       }
       catch (error) {
         if (error instanceof Error)
