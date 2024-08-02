@@ -14,7 +14,13 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module',
     '@nuxt/image',
     'nuxt-svgo',
+    'shadcn-nuxt',
   ],
+
+  shadcn: {
+    prefix: '',
+    componentDir: './components/ui',
+  },
 
   css: ['~/assets/css/main.scss'],
 
