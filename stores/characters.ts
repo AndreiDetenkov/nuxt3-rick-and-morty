@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia'
 import type { Character, Info } from '~/stores/types'
 import { generateRandomNumbers } from '~/utils/randomNumbers'
+import { useEnvVariables } from '~/composables/useEnvVariables'
 
 interface ResponseInterface {
   info: Info
   results: Character[]
 }
 
-const baseUrl = 'https://rickandmortyapi.com/api'
 export const useCharactersStore = defineStore('characters', {
   state: () => ({
     characters: [] as Character[],
@@ -19,6 +19,8 @@ export const useCharactersStore = defineStore('characters', {
 
   actions: {
     async getCharactersByPage(page: number): Promise<void> {
+      const { baseUrl } = useEnvVariables()
+
       try {
         const response = await $fetch<ResponseInterface>(`${baseUrl}/character?page=${page}`)
         const { results, info } = response
@@ -32,6 +34,8 @@ export const useCharactersStore = defineStore('characters', {
     },
 
     async getRandomCharacters(): Promise<void> {
+      const { baseUrl } = useEnvVariables()
+
       try {
         const ids: number[] = generateRandomNumbers()
         this.characters = await $fetch(`${baseUrl}/character/${ids}`)
@@ -43,6 +47,8 @@ export const useCharactersStore = defineStore('characters', {
     },
 
     async getCharacterById(id: number): Promise<void> {
+      const { baseUrl } = useEnvVariables()
+
       try {
         this.isLoading = true
         this.character = await $fetch(`${baseUrl}/character/${id}`)

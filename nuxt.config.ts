@@ -2,6 +2,12 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    public: {
+      baseUrl: '',
+    },
+  },
+
   modules: [
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
