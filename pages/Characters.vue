@@ -23,7 +23,7 @@ function onNextHandler(page: number): void {
 <template>
   <Loading v-if="store.isLoading" />
 
-  <div v-else class="py-10">
+  <section v-else class="py-10">
     <TheContainer class="grid md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-4 xl:gap-6 mb-10">
       <CharacterCard
         v-for="character in store.characters"
@@ -39,5 +39,5 @@ function onNextHandler(page: number): void {
         @next="onNextHandler"
       />
     </TheContainer>
-  </div>
+  </section>
 </template>

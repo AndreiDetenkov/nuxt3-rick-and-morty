@@ -25,7 +25,7 @@ const location = computed<LocationProp>(() => {
         :src="character.image"
         :alt="character.name"
         class="h-[240px] w-full object-contain mt-4 sm:mt-0 sm:object-cover md:h-full"
-        loading="lazy"
+        preload
       />
     </div>
 
