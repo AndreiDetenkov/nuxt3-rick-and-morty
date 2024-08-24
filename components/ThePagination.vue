@@ -9,7 +9,6 @@ const emit = defineEmits<{
 }>()
 
 const defaultPage = 1
-
 const page = ref<number>(defaultPage)
 
 function prevAction() {

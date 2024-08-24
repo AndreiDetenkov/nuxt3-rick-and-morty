@@ -24,9 +24,11 @@ export const useCharactersStore = defineStore('characters', {
       try {
         this.isLoading = true
         const response = await $fetch<ResponseInterface>(`${baseUrl}/character?page=${page}`)
-        const { results, info } = response
-        this.characters = results
-        this.pageInfo = info
+
+        if (Object.keys(response).length) {
+          this.characters = response.results
+          this.pageInfo = response.info
+        }
       }
       catch (error) {
         if (error instanceof Error)

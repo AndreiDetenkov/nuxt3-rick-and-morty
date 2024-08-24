@@ -8,25 +8,29 @@ useSeoMeta({
 })
 
 const store = useCharactersStore()
+const { getCharactersByPage } = store
+const { characters, pageInfo, isLoading } = storeToRefs(store)
 
-store.getCharactersByPage(1)
+onMounted(() => {
+  getCharactersByPage(1)
+})
 
 function onPrevHandler(page: number): void {
-  store.getCharactersByPage(page)
+  getCharactersByPage(page)
 }
 
 function onNextHandler(page: number): void {
-  store.getCharactersByPage(page)
+  getCharactersByPage(page)
 }
 </script>
 
 <template>
-  <Loading v-if="store.isLoading" />
+  <Loading v-if="isLoading" />
 
-  <section v-else class="py-10">
+  <section class="py-10">
     <TheContainer class="grid md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-4 xl:gap-6 mb-10">
       <CharacterCard
-        v-for="character in store.characters"
+        v-for="character in characters"
         :key="character.id.toString()"
         :character="character"
       />
@@ -34,7 +38,7 @@ function onNextHandler(page: number): void {
 
     <TheContainer class="flex justify-center">
       <ThePagination
-        :pages="store.pageInfo.pages"
+        :pages="pageInfo.pages"
         @prev="onPrevHandler"
         @next="onNextHandler"
       />
