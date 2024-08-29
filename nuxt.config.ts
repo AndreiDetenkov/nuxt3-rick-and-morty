@@ -8,14 +8,6 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: [
-    '@pinia/nuxt',
-    '@nuxtjs/color-mode',
-    '@nuxt/test-utils/module',
-    '@nuxt/image',
-    'nuxt-svgo',
-  ],
-
   css: ['~/assets/css/main.scss'],
 
   postcss: {
@@ -30,6 +22,14 @@ export default defineNuxtConfig({
     strict: true,
   },
 
+  modules: [
+    '@pinia/nuxt',
+    '@nuxtjs/color-mode',
+    '@nuxt/test-utils/module',
+    '@nuxt/image',
+    'nuxt-svgo',
+  ],
+
   colorMode: {
     preference: 'system',
     classSuffix: '',
@@ -40,4 +40,5 @@ export default defineNuxtConfig({
     defaultImport: 'component',
   },
 
+  compatibilityDate: '2024-08-29',
 })
