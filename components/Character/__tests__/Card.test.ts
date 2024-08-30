@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { enableAutoUnmount, shallowMount } from '@vue/test-utils'
-import Info from '~/components/Character/Info.vue'
+import Card from '~/components/Character/Card.vue'
 import type { Character } from '~/stores/types'
 
 const characterMock = {
@@ -18,30 +18,26 @@ const characterMock = {
   created: '2017-11-04T18:48:46.250Z',
 } as Character
 
-describe('info component', () => {
+describe('card component', () => {
   let wrapper: any
   enableAutoUnmount(afterEach)
 
   beforeEach(() => {
-    wrapper = shallowMount(Info, {
+    wrapper = shallowMount(Card, {
       props: {
         character: characterMock,
       },
     })
   })
 
-  it('should render info component', () => {
-    expect(wrapper.find('[data-test="info"]').exists()).toBe(true)
+  it('should computed episode prop', () => {
+    expect(wrapper.vm.episode).toBe('1')
   })
 
   it('should computed location prop', () => {
-    expect(wrapper.vm.locationProp).toEqual({
+    expect(wrapper.vm.location).toEqual({
       name: 'Citadel of Ricks',
       id: '3',
     })
-  })
-
-  it('should computed episodes prop', () => {
-    expect(wrapper.vm.episodesProp).toEqual(['1', '2'])
   })
 })

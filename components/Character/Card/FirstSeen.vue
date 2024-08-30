@@ -9,8 +9,11 @@ defineProps<{
     <p class="text text-primary-light mb-1">
       First seen in:
     </p>
-    <NuxtLink :to="`/episode/${episode}`">
-      <h2 class="text-md text-light-gray transition-colors duration-300 hover:text-orange-400">
+    <NuxtLink data-test="episode-link" :to="`/episode/${episode}`">
+      <h2
+        data-test="episode-title"
+        class="text-md text-light-gray transition-colors duration-300 hover:text-orange-400"
+      >
         episode: {{ episode }}
       </h2>
     </NuxtLink>
