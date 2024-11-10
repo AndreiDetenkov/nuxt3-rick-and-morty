@@ -16,7 +16,7 @@ defineProps<{
     </p>
     <NuxtLink
       data-test="location-link"
-      :to="`/location/${location.id}`"
+      :to="{ name: 'location-id', params: { id: location.id } }"
     >
       <h2
         data-test="location-name"

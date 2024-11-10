@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import IconHero from '~/assets/icons/hero.svg'
+</script>
+
 <template>
   <div class="relative grid place-items-center h-full">
     <h1
@@ -7,7 +11,7 @@
     </h1>
 
     <div class="absolute bottom-0 left-0 right-0 h-full w-full px-4 pt-4">
-      <svgo-hero
+      <IconHero
         :font-controlled="false"
         class="h-full w-full fill-primary-lighter dark:fill-primary-light/20"
       />

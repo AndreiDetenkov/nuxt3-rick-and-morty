@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['~/assets/css/main.scss'],
+  css: ['./assets/css/main.css'],
 
   postcss: {
     plugins: {
@@ -28,13 +28,12 @@ export default defineNuxtConfig({
     'nuxt-svgo',
   ],
 
+  svgo: {
+    defaultImport: 'component',
+  },
+
   colorMode: {
     preference: 'system',
     classSuffix: '',
-  },
-
-  svgo: {
-    autoImportPath: '~/assets/icons/',
-    defaultImport: 'component',
   },
 })

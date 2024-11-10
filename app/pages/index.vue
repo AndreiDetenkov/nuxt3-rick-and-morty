@@ -7,8 +7,8 @@ useSeoMeta({
   ogImage: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
 })
 
-const store = useCharactersStore()
-store.getRandomCharacters()
+const { $api } = useNuxtApp()
+const { data } = useAsyncData('characters', () => $api.characters.getRandom())
 </script>
 
 <template>
@@ -19,7 +19,7 @@ store.getRandomCharacters()
   <section class="py-20 border-b dark:border-b-primary">
     <SectionCharacters>
       <CharacterCard
-        v-for="character in store.characters"
+        v-for="character in data"
         :key="character.id.toString()"
         :character="character"
       />
