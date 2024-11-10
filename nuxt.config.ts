@@ -1,6 +1,9 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  future: {
+    compatibilityVersion: 4,
+  },
+
+  devtools: { enabled: false },
 
   runtimeConfig: {
     public: {
@@ -15,11 +18,6 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
-  },
-
-  typescript: {
-    typeCheck: false,
-    strict: true,
   },
 
   modules: [
@@ -39,6 +37,4 @@ export default defineNuxtConfig({
     autoImportPath: '~/assets/icons/',
     defaultImport: 'component',
   },
-
-  compatibilityDate: '2024-08-29',
 })
