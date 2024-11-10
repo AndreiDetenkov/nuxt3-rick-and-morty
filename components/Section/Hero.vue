@@ -1,9 +1,3 @@
-<script>
-export default {
-  name: 'HeroSection',
-}
-</script>
-
 <template>
   <div class="relative grid place-items-center h-full">
     <h1
