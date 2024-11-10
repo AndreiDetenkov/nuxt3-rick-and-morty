@@ -8,7 +8,7 @@ useSeoMeta({
 })
 
 const { $api } = useNuxtApp()
-const { data } = useAsyncData('characters', () => $api.characters.getRandom())
+const { data: characters } = await useAsyncData(() => $api.characters.getRandom())
 </script>
 
 <template>
@@ -19,7 +19,7 @@ const { data } = useAsyncData('characters', () => $api.characters.getRandom())
   <section class="py-20 border-b dark:border-b-primary">
     <SectionCharacters>
       <CharacterCard
-        v-for="character in data"
+        v-for="character in characters"
         :key="character.id.toString()"
         :character="character"
       />

@@ -26,5 +26,9 @@ function toggleColorMode(preference: string) {
     <main class="flex-1">
       <slot />
     </main>
+
+    <footer>
+      <TheFooter />
+    </footer>
   </div>
 </template>
