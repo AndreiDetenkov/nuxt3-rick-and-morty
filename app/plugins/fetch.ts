@@ -1,3 +1,5 @@
+import { createCharactersRepository } from '~/repository/characters'
+
 export default defineNuxtPlugin({
   name: 'fetch',
   async setup() {
@@ -6,13 +8,16 @@ export default defineNuxtPlugin({
     const appFetch = $fetch.create({
       baseURL: config.public.baseUrl,
       retry: false,
-      onRequest() {},
-      onResponseError() {},
     })
+
+    const api = {
+      characters: createCharactersRepository(appFetch),
+    }
 
     return {
       provide: {
         appFetch,
+        api,
       },
     }
   },

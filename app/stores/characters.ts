@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia'
 import { useEnvVariables } from '~/composables/useEnvVariables'
 import type { Character, Info } from '~/stores/types'
-import { generateRandomNumbers } from '~/utils/randomNumbers'
 
 interface ResponseInterface {
   info: Info
@@ -29,23 +28,6 @@ export const useCharactersStore = defineStore('characters', {
           this.characters = response.results
           this.pageInfo = response.info
         }
-      }
-      catch (error) {
-        if (error instanceof Error)
-          this.error = error.message
-      }
-      finally {
-        this.isLoading = false
-      }
-    },
-
-    async getRandomCharacters(): Promise<void> {
-      const { baseUrl } = useEnvVariables()
-
-      try {
-        this.isLoading = true
-        const ids: number[] = generateRandomNumbers()
-        this.characters = await $fetch<Character[]>(`${baseUrl}/character/${ids}`)
       }
       catch (error) {
         if (error instanceof Error)
