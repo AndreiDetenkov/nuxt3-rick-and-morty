@@ -12,8 +12,14 @@ const navItems = [
 
 <template>
   <footer data-test="footer" class="flex items-center justify-center px-4 py-10 space-x-6">
-    <NuxtLink v-for="item in navItems" :key="item.testId" :to="item.link" target="_blank" data-test="github-link">
-      <component :is="item.icon" class="w-6 h-6 fill-primary-light hover:fill-orange-400 transition duration-300" />
+    <NuxtLink
+      v-for="item in navItems" :key="item.testId" :to="item.link" target="_blank"
+      :data-test="item.testId"
+    >
+      <component
+        :is="item.icon"
+        class="w-6 h-6 fill-primary-light hover:fill-orange-400 transition duration-300"
+      />
     </NuxtLink>
   </footer>
 </template>
