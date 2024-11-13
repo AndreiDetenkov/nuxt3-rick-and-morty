@@ -10,7 +10,7 @@ const navList: NavItem[] = [
 </script>
 
 <template>
-  <nav data-test="nav" class="flex items-center space-x-6">
+  <nav data-test="nav">
     <NavList :list="navList" />
   </nav>
 </template>

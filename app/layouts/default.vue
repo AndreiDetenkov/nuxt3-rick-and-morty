@@ -12,23 +12,24 @@ function toggleColorMode(preference: string) {
 
 <template>
   <div class="h-dvh w-dvw flex flex-col">
-    <TheHeader>
-      <template #logo>
-        <TheLogo />
-      </template>
+    <header>
+      <BaseHeader>
+        <template #logo>
+          <BaseLogo />
+        </template>
 
-      <template #nav>
-        <Navigation />
+        <div class="w-full" />
+        <!-- <Navigation /> -->
         <ToggleColorMode :is-dark-mode="isDarkMode" @toggle-color-mode="toggleColorMode" />
-      </template>
-    </TheHeader>
+      </BaseHeader>
+    </header>
 
     <main class="flex-1">
       <slot />
     </main>
 
     <footer>
-      <TheFooter />
+      <BaseFooter />
     </footer>
   </div>
 </template>

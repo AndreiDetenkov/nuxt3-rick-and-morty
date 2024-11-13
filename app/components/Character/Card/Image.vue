@@ -1,7 +1,7 @@
 <script setup lang="ts">
-defineProps<{
+const { name = '' } = defineProps<{
   image: string
-  name: string
+  name?: string
 }>()
 </script>
 

@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import TheLogo from '~/components/TheLogo.vue'
+import TheLogo from '~/components/Base/Logo.vue'
 
 describe('toggleColorMode component', () => {
   it('should render component', () => {

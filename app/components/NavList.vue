@@ -5,7 +5,7 @@ defineProps<NavListProps>()
 </script>
 
 <template>
-  <ul data-test="nav-list" class="flex flex-row items-center justify-between space-x-7">
+  <ul data-test="nav-list" class="flex flex-row items-center space-x-7">
     <NavItem
       v-for="(item, index) in list"
       :key="`nav-item-${index}`"
