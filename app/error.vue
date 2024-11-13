@@ -9,6 +9,7 @@ defineProps({
 <template>
   <div v-if="error">
     <h1>{{ error.statusCode }}</h1>
+    <pre>{{ error }}</pre>
     <NuxtLink to="/">
       Go back home
     </NuxtLink>
