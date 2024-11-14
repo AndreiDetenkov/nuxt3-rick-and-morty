@@ -1,4 +1,65 @@
 
+## v2.0.0
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v1.4.1...v2.0.0)
+
+### 🚀 Enhancements
+
+- **pagination:** Wip ([0e98d3e](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/0e98d3e))
+- **pagination:** Wip ([3b39434](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/3b39434))
+- Implement use env variables composable ([2e6460d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/2e6460d))
+- Update pagination component ([36cfda8](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/36cfda8))
+- **app:** ⚠️  Upgrade nuxt compatibility version to 4 ([1a7937d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/1a7937d))
+- Create custom $fetch and useFetch ([5d39db2](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/5d39db2))
+- Implement characters repository ([e78c0e7](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/e78c0e7))
+
+### 💅 Refactors
+
+- Add types ([a37d293](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/a37d293))
+- Small updates ([a9b278d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/a9b278d))
+- Get characters by page improvement ([22ff488](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/22ff488))
+- Character card enhancement ([a783530](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/a783530))
+- Add layout, icons paths ([7cc0894](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/7cc0894))
+- Update footer ([c8ddaed](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/c8ddaed))
+- Index page sections structure update ([b0bb624](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/b0bb624))
+- Rename components in template ([0108d66](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/0108d66))
+
+### 📖 Documentation
+
+- Update readme ([ea935e0](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/ea935e0))
+
+### 🏡 Chore
+
+- Update dependencies ([3c2a479](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/3c2a479))
+- Move types into utils folder ([f947717](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/f947717))
+- Text improvements ([6073a9e](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/6073a9e))
+- Bump version of dependencies, add .nvmrc ([af4d4c8](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/af4d4c8))
+- Install nuxt-shadcn module ([531d129](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/531d129))
+- Update pnpm version ([b08cb55](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/b08cb55))
+- Remove shadcn-nuxt ([255fee1](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/255fee1))
+- Update dependencies to latest ([0ccc7ed](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/0ccc7ed))
+- Config files updating ([d6a6fed](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/d6a6fed))
+- Update github ci file ([a72263e](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/a72263e))
+- Upgrade dependencies ([ce25e40](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/ce25e40))
+- Small updates ([a0dfc4d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/a0dfc4d))
+
+### ✅ Tests
+
+- Tests for character card and info ([b39d290](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/b39d290))
+- Update footer test ([eab8a2c](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/eab8a2c))
+
+### 🎨 Styles
+
+- Update styling of the hero section ([b612e4d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/b612e4d))
+
+#### ⚠️ Breaking Changes
+
+- **app:** ⚠️  Upgrade nuxt compatibility version to 4 ([1a7937d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/1a7937d))
+
+### ❤️ Contributors
+
+- Andrei.detenkov <a.detenkov@gmail.com>
+
 ## v1.4.1
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v1.4.0...v1.4.1)

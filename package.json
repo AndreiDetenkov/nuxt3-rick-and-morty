@@ -1,7 +1,7 @@
 {
   "name": "rick-and-morty-app",
   "type": "module",
-  "version": "1.4.1",
+  "version": "2.0.0",
   "private": true,
   "author": {
     "name": "Andrei Detenkov",
