@@ -1,4 +1,26 @@
 
+## v2.1.0
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.0.0...v2.1.0)
+
+### 🚀 Enhancements
+
+- Implement shadcn card component ([68aa3b4](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/68aa3b4))
+
+### 💅 Refactors
+
+- Move tests into the common folder ([ec29239](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/ec29239))
+- Rename folders ([7fe3ea2](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/7fe3ea2))
+
+### 🏡 Chore
+
+- Implement nuxt/tailwindcss module ([07224b6](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/07224b6))
+- Setup shadcn-ui nuxt module ([7c98a14](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/7c98a14))
+
+### ❤️ Contributors
+
+- Andrei.detenkov <a.detenkov@gmail.com>
+
 ## v2.0.0
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v1.4.1...v2.0.0)
