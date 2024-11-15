@@ -20,11 +20,12 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module',
     '@nuxt/image',
     'nuxt-svgo',
+    'shadcn-nuxt',
   ],
 
   tailwindcss: {
     cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'first' }],
-    configPath: './tailwind.config.ts',
+    configPath: '~~/tailwind.config.ts',
   },
 
   svgo: {
@@ -34,5 +35,10 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'system',
     classSuffix: '',
+  },
+
+  shadcn: {
+    prefix: '',
+    componentDir: '~/components',
   },
 })
