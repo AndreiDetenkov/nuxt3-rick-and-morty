@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import LocationLink from '~/components/Character/Info/LocationLink.vue'
+import LocationLink from '~/components/character/info/LocationLink.vue'
 
 describe('character info location link component', () => {
   const locationPropTest = {

@@ -1,6 +1,6 @@
 import { enableAutoUnmount, shallowMount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import Card from '~/components/Character/Card.vue'
+import Card from '~/components/character/Card.vue'
 import type { Character } from '~/stores/types'
 
 const characterMock = {

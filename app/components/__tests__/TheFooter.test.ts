@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import TheFooter from '~/components/Base/Footer.vue'
+import TheFooter from '~/components/base/Footer.vue'
 
 describe('theFooter component', () => {
   let wrapper: any

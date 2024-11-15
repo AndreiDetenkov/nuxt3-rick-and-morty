@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import EpisodeLink from '~/components/Character/Info/EpisodeLink.vue'
+import EpisodeLink from '~/components/character/info/EpisodeLink.vue'
 
 const episodesPropTest = ['S01E01', 'S01E02', 'S01E03']
 

@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import List from '~/components/Character/Info/List.vue'
+import List from '~/components/character/info/List.vue'
 
 describe('character info list component', () => {
   const testProp = {

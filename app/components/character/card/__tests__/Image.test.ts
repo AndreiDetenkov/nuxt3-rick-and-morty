@@ -1,6 +1,6 @@
-import Image from '@/components/Character/Card/Image.vue'
 import { shallowMount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
+import Image from '~/components/character/card/Image.vue'
 
 const image = 'https://example.com/image.jpg'
 const name = 'Example Name'

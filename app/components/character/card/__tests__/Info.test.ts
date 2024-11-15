@@ -1,6 +1,6 @@
-import Info from '@/components/Character/Card/Info.vue'
 import { shallowMount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
+import Info from '~/components/character/card/Info.vue'
 
 const character = {
   id: '1',

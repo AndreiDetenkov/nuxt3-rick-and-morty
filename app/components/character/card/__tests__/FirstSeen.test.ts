@@ -1,6 +1,6 @@
-import FirstSeen from '@/components/Character/Card/FirstSeen.vue'
 import { shallowMount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
+import FirstSeen from '~/components/character/card/FirstSeen.vue'
 
 const episode = 'S01E01'
 

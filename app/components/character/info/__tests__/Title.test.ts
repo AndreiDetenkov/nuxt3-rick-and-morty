@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import Title from '~/components/Character/Info/Title.vue'
+import Title from '~/components/character/info/Title.vue'
 
 describe('character info title component', () => {
   it('should render the title', () => {
