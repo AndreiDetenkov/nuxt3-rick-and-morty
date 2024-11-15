@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CharacterInfoListProp } from '~/utils/types'
+import type { CharacterInfoListProp } from '~/shared/types'
 
 defineProps<{
   list: CharacterInfoListProp

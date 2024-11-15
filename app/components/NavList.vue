@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavListProps } from '~/utils/types'
+import type { NavListProps } from '~/shared/types'
 
 defineProps<NavListProps>()
 </script>

@@ -1,5 +1,5 @@
 import type { $Fetch } from 'nitropack/types'
-import { generateRandomNumbers } from '~/utils/randomNumbers'
+import { generateRandomNumbers } from '~/shared/randomNumbers'
 
 export function createCharactersRepository(appFetch: $Fetch) {
   return {
