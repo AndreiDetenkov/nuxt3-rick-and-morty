@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Card from '~/components/ui/card/Card.vue'
 import type { Character } from '~/stores/types'
 // import type { LocationProp } from '~/utils/types'
 
@@ -16,14 +17,23 @@ const { character } = defineProps<{ character: Character }>()
 // })
 </script>
 
-<template>
-  <CharacterCardWrapper>
-    <CharacterCardImage :image="character.image" :name="character.name" />
+<!-- <template> -->
+<!--  <CharacterCardWrapper> -->
+<!--    <CharacterCardImage :image="character.image" :name="character.name" /> -->
+<!--    <CharacterCardContentWrapper> -->
+<!--      <CharacterCardInfo :character="character" /> -->
+<!--      <CharacterCardLocation :location="location" /> -->
+<!--      <CharacterCardFirstSeen :episode="episode" /> -->
+<!--    </CharacterCardContentWrapper> -->
+<!--  </CharacterCardWrapper> -->
+<!-- </template> -->
 
-    <CharacterCardContentWrapper>
-      <!--      <CharacterCardInfo :character="character" /> -->
-      <!--      <CharacterCardLocation :location="location" /> -->
-      <!--      <CharacterCardFirstSeen :episode="episode" /> -->
-    </CharacterCardContentWrapper>
-  </CharacterCardWrapper>
+<template>
+  <Card>
+    <lazy-nuxt-img
+      :src="character.image"
+      :alt="character.name"
+      class="w-full h-64 object-cover rounded-lg"
+    />
+  </Card>
 </template>
