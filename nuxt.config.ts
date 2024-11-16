@@ -39,6 +39,8 @@ export default defineNuxtConfig({
 
   shadcn: {
     prefix: '',
-    componentDir: '~/components',
+    componentDir: './app/components/ui',
   },
+
+  compatibilityDate: '2024-11-16',
 })
