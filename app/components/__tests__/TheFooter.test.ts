@@ -1,31 +1,76 @@
-import { shallowMount } from '@vue/test-utils'
-import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import TheFooter from '~/components/base/Footer.vue'
+import type { DOMWrapper, VueWrapper } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
+import Footer from '~/components/base/Footer.vue'
 
-describe('theFooter component', () => {
-  let wrapper: any
+vi.mock('assets/icons/currency.svg', () => ({
+  default: {
+    template: '<div class="mock-currency-icon" />',
+  },
+}))
+
+vi.mock('assets/icons/github.svg', () => ({
+  default: {
+    template: '<div class="mock-github-icon" />',
+  },
+}))
+
+vi.mock('assets/icons/twitter.svg', () => ({
+  default: {
+    template: '<div class="mock-twitter-icon" />',
+  },
+}))
+
+describe('footer', () => {
+  let wrapper: VueWrapper
 
   beforeEach(() => {
-    wrapper = shallowMount(TheFooter)
+    wrapper = mount(Footer, {
+      global: {
+        stubs: {
+          'base-container': {
+            template: '<div><slot /></div>',
+          },
+          'nuxt-link': {
+            template: '<a :href="$attrs.to" :target="$attrs.target"><slot /></a>',
+          },
+        },
+      },
+    })
   })
 
-  afterEach(() => {
-    wrapper.unmount()
-  })
-
-  it('should render component', () => {
+  it('renders the footer element', () => {
     expect(wrapper.find('[data-test="footer"]').exists()).toBe(true)
   })
 
-  it('should render footer links', () => {
-    expect(wrapper.findAll('nuxt-link-stub').length).toBe(3)
+  it('renders all navigation items', () => {
+    const links = wrapper.findAll('a')
+    expect(links).toHaveLength(3)
   })
 
-  it.each([
-    { id: 'github-link', link: 'https://github.com/afuh/rick-and-morty-api' },
-    { id: 'twitter-link', link: 'https://twitter.com/rickandmortyapi' },
-    { id: 'support-link', link: 'https://rickandmortyapi.com/support-us' },
-  ])(`should render $id with correct link`, ({ id, link }) => {
-    expect(wrapper.find(`[data-test="${id}"]`).attributes('to')).toEqual(link)
+  it('renders the correct links with proper attributes', async () => {
+    const links: DOMWrapper<HTMLAnchorElement>[] = wrapper.findAll('a')
+
+    const expectedLinks = [
+      {
+        href: 'https://github.com/afuh/rick-and-morty-api',
+        testId: 'github-link',
+      },
+      {
+        href: 'https://twitter.com/rickandmortyapi',
+        testId: 'twitter-link',
+      },
+      {
+        href: 'https://rickandmortyapi.com/support-us',
+        testId: 'support-link',
+      },
+    ] as const
+
+    expectedLinks.forEach((expected, index) => {
+      const link: DOMWrapper<HTMLAnchorElement> = links[index]!
+      expect(link.attributes('href')).toBe(expected.href)
+      expect(link.attributes('target')).toBe('_blank')
+      expect(link.attributes('data-test')).toBe(expected.testId)
+    })
   })
 })
