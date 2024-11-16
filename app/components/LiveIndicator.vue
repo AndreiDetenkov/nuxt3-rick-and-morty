@@ -13,5 +13,5 @@ const statusColor = computed(() => {
 </script>
 
 <template>
-  <p class="mr-1.5 h-3 w-3 rounded-full" :class="statusColor" />
+  <div class="mr-1.5 h-3 w-3 rounded-full" :class="statusColor" />
 </template>
