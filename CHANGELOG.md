@@ -1,4 +1,35 @@
 
+## v2.2.0
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.1.0...v2.2.0)
+
+### 🚀 Enhancements
+
+- Implement shared folder ([e863e0e](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/e863e0e))
+
+### 💅 Refactors
+
+- Update characters grid / container ([259b99d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/259b99d))
+- Add image into shadcn card ([d0f16ee](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/d0f16ee))
+- Update character card and card component ([3ccdb49](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/3ccdb49))
+- Remove custom card component ([c332f7e](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/c332f7e))
+
+### 🏡 Chore
+
+- Update shadcn config path ([4169107](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/4169107))
+- Update shadcn base color config ([6c8728e](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/6c8728e))
+- Update pnpm version ([bc8e12f](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/bc8e12f))
+- Update pnpm version ([11d30a2](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/11d30a2))
+
+### ✅ Tests
+
+- Improve test for Footer component ([8b722b8](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/8b722b8))
+- Improve test for Header component ([c13ee82](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/c13ee82))
+
+### ❤️ Contributors
+
+- Andrei.detenkov <a.detenkov@gmail.com>
+
 ## v2.1.0
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.0.0...v2.1.0)
