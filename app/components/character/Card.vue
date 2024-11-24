@@ -6,7 +6,10 @@ const { character } = defineProps<{ character: Character }>()
 </script>
 
 <template>
-  <Card>
+  <Card
+    class="cursor-pointer"
+    @click="navigateTo({ name: 'character-id', params: { id: character.id } })"
+  >
     <lazy-nuxt-img
       :src="character.image"
       :alt="character.name"
