@@ -8,5 +8,9 @@ export function createCharactersRepository(appFetch: $Fetch) {
 
       return appFetch<Character[]>(`/character/${ids}`)
     },
+
+    getCharacterById(id: number): Promise<Character> {
+      return appFetch<Character>(`/character/${id}`)
+    },
   }
 }

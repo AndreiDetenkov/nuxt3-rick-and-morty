@@ -37,21 +37,5 @@ export const useCharactersStore = defineStore('characters', {
         this.isLoading = false
       }
     },
-
-    async getCharacterById(id: number): Promise<void> {
-      const { baseUrl } = useEnvVariables()
-
-      try {
-        this.isLoading = true
-        this.character = await $fetch<Character>(`${baseUrl}/character/${id}`)
-      }
-      catch (error) {
-        if (error instanceof Error)
-          this.error = error.message
-      }
-      finally {
-        this.isLoading = false
-      }
-    },
   },
 })
