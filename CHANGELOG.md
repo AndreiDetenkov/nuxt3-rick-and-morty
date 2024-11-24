@@ -1,4 +1,20 @@
 
+## v2.2.1
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.2.0...v2.2.1)
+
+### 💅 Refactors
+
+- Create section character, navigate to character ([e63ea33](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/e63ea33))
+
+### 🏡 Chore
+
+- Update components naming in template ([d0bfeee](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/d0bfeee))
+
+### ❤️ Contributors
+
+- Andrei.detenkov <a.detenkov@gmail.com>
+
 ## v2.2.0
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.1.0...v2.2.0)
