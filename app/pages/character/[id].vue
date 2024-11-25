@@ -14,7 +14,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <section-character>
+  <section-character v-if="character">
     <character-info :character="character" />
   </section-character>
 </template>

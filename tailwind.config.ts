@@ -14,7 +14,6 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: '2rem',
       screens: {
         '2xl': '1400px',
       },
@@ -27,6 +26,9 @@ export default {
         'primary-lighter': '#f5f5f5',
         'primary-dark': '#333',
         'primary-darker': '#272B33',
+      },
+      gridTemplateColumns: {
+        'auto-1fr': 'auto 1fr',
       },
       keyframes: {
         'accordion-down': {

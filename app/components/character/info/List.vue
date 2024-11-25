@@ -1,28 +1,22 @@
 <script setup lang="ts">
 import type { CharacterInfoListProp } from '~/shared/types'
 
-defineProps<{
-  list: CharacterInfoListProp
-}>()
+const { status, species, type, gender } = defineProps<CharacterInfoListProp>()
 </script>
 
 <template>
-  <ul class="text-xl mb-4 space-y-2">
+  <ul class="text-lg space-y-1">
     <li class="flex items-center">
-      <svgo-pulse class="h-6 w-6 mr-2 fill-primary-light" />
-      Status: {{ list.status }}
+      Status: {{ status }}
     </li>
     <li class="flex items-center">
-      <svgo-location class="h-6 w-6 mr-2 fill-primary-light" />
-      Species: {{ list.species }}
+      Species: {{ species }}
     </li>
     <li class="flex items-center">
-      <svgo-account class="h-6 w-6 mr-2 fill-primary-light" />
-      Type: {{ list.type }}
+      Type: {{ type }}
     </li>
     <li class="flex items-center">
-      <svgo-gender class="h-6 w-6 mr-2 fill-primary-light" />
-      Gender: {{ list.gender }}
+      Gender: {{ gender }}
     </li>
   </ul>
 </template>

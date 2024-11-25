@@ -1,33 +1,54 @@
 <script setup lang="ts">
+import { Button } from '~/components/ui/button'
 import type { LocationProp } from '~/shared/types'
 import type { Character } from '~/stores/types'
 
-const props = defineProps<{
+const { character } = defineProps<{
   character: Character
 }>()
 
-const { name, image, status, species, type, gender, location, episode } = toRefs(props.character)
-
-const locationProp = computed<LocationProp>(() => {
+const location = computed<LocationProp>(() => {
   return {
-    name: location.value.name,
-    id: location.value.url.split('/').slice(-1).join(''),
+    name: character.location.name,
+    id: character.location.url.split('/').slice(-1).join(''),
   }
 })
 
-const episodesProp = computed<string[]>(() => {
-  return episode.value.map((item: string) =>
-    item.split('/').slice(-1).join(''),
-  )
+const episodes = computed<string[]>(() => {
+  return character.episode.map((item: string) => (item.split('/').slice(-1).join('')))
 })
 </script>
 
 <template>
-  <div data-test="info" class="w-full flex flex-col items-center">
-    <lazy-nuxt-img :src="image" class="mb-8 h-auto w-80 rounded-2xl" />
-    <CharacterInfoTitle :name="name" />
-    <CharacterInfoList :list="{ status, species, type, gender }" />
-    <CharacterInfoLocationLink :location="locationProp" />
-    <CharacterInfoEpisodeLink :episodes="episodesProp" />
-  </div>
+  <Card data-test="info" class="grid grid-cols-1 md:grid-cols-auto-1fr md:justify-start">
+    <div class="m-4 grid place-items-center md:place-items-start">
+      <lazy-nuxt-img :src="character.image" class="rounded-lg w-max-80 w-full md:w-80 md:h-80" />
+    </div>
+    <div>
+      <card-header>
+        <card-title>{{ character.name }}</card-title>
+      </card-header>
+
+      <card-content>
+        <character-info-list
+          :status="character.status"
+          :gender="character.gender"
+          :species="character.species"
+          :type="character.type"
+        />
+        <character-info-divider />
+        <character-info-location-link :location="location" class="mb-4" />
+        <character-info-divider />
+        <character-info-episode-links :episodes="episodes" />
+      </card-content>
+
+      <card-footer>
+        <Button as-child class="mt-4">
+          <NuxtLink to="/">
+            Back
+          </NuxtLink>
+        </Button>
+      </card-footer>
+    </div>
+  </Card>
 </template>

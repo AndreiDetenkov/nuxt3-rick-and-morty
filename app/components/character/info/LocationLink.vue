@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import type { LocationProp } from '~/shared/types'
 
-defineProps<{ location: LocationProp }>()
+const { location } = defineProps<{ location: LocationProp }>()
 </script>
 
 <template>
-  <p data-test="location" class="text-2xl text-center mb-4 font-bold transition-colors duration-300 hover:text-orange-400">
-    <NuxtLink data-test="link" :to="`/location/${location.id}`">
-      Location - {{ location.name }}
-    </NuxtLink>
-  </p>
+  <NuxtLink
+    data-test="location-link"
+    :to="{ name: 'location-id', params: { id: location.id } }"
+    class="text-lg font-medium"
+  >
+    Location: <span class="transition-colors duration-300 hover:text-orange-400">{{ location.name }}</span>
+  </NuxtLink>
 </template>
