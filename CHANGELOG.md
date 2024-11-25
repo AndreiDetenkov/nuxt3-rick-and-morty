@@ -1,4 +1,21 @@
 
+## v2.3.0
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.2.1...v2.3.0)
+
+### 🚀 Enhancements
+
+- Implement ui button component ([ec33d0b](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/ec33d0b))
+
+### 💅 Refactors
+
+- Fetch character info with ssr ([52006ce](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/52006ce))
+- Update character info card ([2d6f290](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/2d6f290))
+
+### ❤️ Contributors
+
+- Andrei.detenkov <a.detenkov@gmail.com>
+
 ## v2.2.1
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.2.0...v2.2.1)
