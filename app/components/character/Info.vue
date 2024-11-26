@@ -43,10 +43,8 @@ const episodes = computed<string[]>(() => {
       </card-content>
 
       <card-footer>
-        <Button as-child class="mt-4">
-          <NuxtLink to="/">
-            Back
-          </NuxtLink>
+        <Button class="mt-4" @click.prevent="$router.back()">
+          Back
         </Button>
       </card-footer>
     </div>
