@@ -1,4 +1,22 @@
 
+## v2.4.0
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.3.0...v2.4.0)
+
+### 🚀 Enhancements
+
+- Implement pagination ([c8f2e86](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/c8f2e86))
+- **ui:** Add pagination component ([a062f10](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/a062f10))
+
+### 💅 Refactors
+
+- Get characters by page number ([5fd76ff](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/5fd76ff))
+- Small refactor ([1ec940a](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/1ec940a))
+
+### ❤️ Contributors
+
+- Andrei.detenkov <a.detenkov@gmail.com>
+
 ## v2.3.0
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.2.1...v2.3.0)
