@@ -29,7 +29,7 @@ const { data } = await useAsyncData(
 
     <template #pagination>
       <div class="mt-10 flex justify-center">
-        <Pagination v-slot="{ page }" :total="data.info.count" :items-per-page="20" show-edges :default-page="currentPage">
+        <Pagination v-slot="{ page }" :total="data.info.count" :items-per-page="20" show-edges :sibling-count="1" :default-page="currentPage">
           <PaginationList v-slot="{ items }" class="flex items-center gap-1">
             <PaginationFirst @click="currentPage = 1" />
             <PaginationPrev @click="currentPage--" />

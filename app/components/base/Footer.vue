@@ -12,9 +12,13 @@ const navItems = [
 
 <template>
   <footer data-test="footer">
-    <base-container class="flex items-center justify-center px-4 py-10 space-x-6">
+    <base-container class="flex items-center justify-center px-4 py-6 space-x-6">
       <nuxt-link
-        v-for="item in navItems" :key="item.testId" :to="item.link" target="_blank"
+        v-for="item in navItems"
+        :key="item.testId"
+        :to="item.link"
+        target="_blank"
+        rel="noopener noreferrer"
         :data-test="item.testId"
       >
         <component
