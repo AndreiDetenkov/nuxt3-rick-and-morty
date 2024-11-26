@@ -70,3 +70,8 @@ export interface Info {
   next: string | null
   prev: string | null
 }
+
+export interface CharactersByPage {
+  info: Info
+  results: Character[]
+}

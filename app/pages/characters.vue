@@ -7,41 +7,18 @@ useSeoMeta({
   ogImage: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
 })
 
-const store = useCharactersStore()
-const { getCharactersByPage } = store
-const { characters, pageInfo, isLoading } = storeToRefs(store)
+const page = ref<number>(1)
 
-onMounted(() => {
-  getCharactersByPage(1)
-})
-
-function onPrevHandler(page: number): void {
-  getCharactersByPage(page)
-}
-
-function onNextHandler(page: number): void {
-  getCharactersByPage(page)
-}
+const { $api } = useNuxtApp()
+const { data: characters } = await useAsyncData(`characters.${page.value}`, () => $api.characters.getByPage(page.value), { watch: [page], transform: data => data.results })
 </script>
 
 <template>
-  <Loading v-if="isLoading" />
-
-  <section class="py-10">
-    <TheContainer class="grid md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-4 xl:gap-6 mb-10">
-      <CharacterCard
-        v-for="character in characters"
-        :key="character.id.toString()"
-        :character="character"
-      />
-    </TheContainer>
-
-    <TheContainer class="flex justify-center">
-      <ThePagination
-        :pages="pageInfo.pages"
-        @prev="onPrevHandler"
-        @next="onNextHandler"
-      />
-    </TheContainer>
-  </section>
+  <section-characters v-if="characters">
+    <CharacterCard
+      v-for="character in characters"
+      :key="character.id.toString()"
+      :character="character"
+    />
+  </section-characters>
 </template>

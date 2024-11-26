@@ -1,5 +1,6 @@
 import type { $Fetch } from 'nitropack/types'
 import { generateRandomNumbers } from '~/shared/randomNumbers'
+import type { CharactersByPage } from '~/stores/types'
 
 export function createCharactersRepository(appFetch: $Fetch) {
   return {
@@ -9,8 +10,12 @@ export function createCharactersRepository(appFetch: $Fetch) {
       return appFetch<Character[]>(`/character/${ids}`)
     },
 
-    getCharacterById(id: number): Promise<Character> {
+    getById(id: number): Promise<Character> {
       return appFetch<Character>(`/character/${id}`)
+    },
+
+    getByPage(page: number): Promise<CharactersByPage> {
+      return appFetch<CharactersByPage>(`/character?page=${page}`)
     },
   }
 }
