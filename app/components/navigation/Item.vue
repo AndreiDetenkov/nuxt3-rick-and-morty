@@ -10,8 +10,8 @@ defineProps<NavItemProps>()
     :to="item.path"
     class="
       text-lg
-      text-[#333]
-      font-bold
+      text-primary
+      font-medium
       transition-colors
       duration-300
       hover:text-orange-400

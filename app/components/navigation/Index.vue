@@ -11,6 +11,6 @@ const navList: NavItem[] = [
 
 <template>
   <nav data-test="nav">
-    <NavList :list="navList" />
+    <navigation-list :list="navList" />
   </nav>
 </template>

@@ -6,7 +6,7 @@ defineProps<NavListProps>()
 
 <template>
   <ul data-test="nav-list" class="flex flex-row items-center space-x-7">
-    <NavItem
+    <navigation-item
       v-for="(item, index) in list"
       :key="`nav-item-${index}`"
       data-test="nav-item"

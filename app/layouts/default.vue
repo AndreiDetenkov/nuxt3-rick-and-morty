@@ -9,7 +9,8 @@
         </template>
 
         <div class="w-full" />
-        <!-- <Navigation /> -->
+
+        <Navigation class="mr-4" />
         <ToggleColorMode />
       </BaseHeader>
     </header>

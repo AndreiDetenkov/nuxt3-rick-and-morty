@@ -1,6 +1,6 @@
 import { enableAutoUnmount, shallowMount } from '@vue/test-utils'
 import { afterEach, describe, expect, it } from 'vitest'
-import NavItem from '~/components/NavItem.vue'
+import NavItem from '~/components/navigation/Item.vue'
 
 describe('nav item component', () => {
   enableAutoUnmount(afterEach)

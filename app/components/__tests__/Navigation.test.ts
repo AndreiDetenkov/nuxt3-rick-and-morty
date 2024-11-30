@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import Navigation from '~/components/Navigation.vue'
+import Navigation from '~/components/navigation/Index.vue'
 
 describe('navigation component', () => {
   it('should render component', () => {
