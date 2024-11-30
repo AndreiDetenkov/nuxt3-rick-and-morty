@@ -1,14 +1,4 @@
-<script setup lang="ts">
-const colorMode = useColorMode()
-
-const isDarkMode = computed(() => {
-  return colorMode.preference === 'dark'
-})
-
-function toggleColorMode(preference: string) {
-  colorMode.preference = preference === 'dark' ? 'light' : 'dark'
-}
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="h-dvh w-dvw flex flex-col">
@@ -20,7 +10,7 @@ function toggleColorMode(preference: string) {
 
         <div class="w-full" />
         <!-- <Navigation /> -->
-        <ToggleColorMode :is-dark-mode="isDarkMode" @toggle-color-mode="toggleColorMode" />
+        <ToggleColorMode />
       </BaseHeader>
     </header>
 
