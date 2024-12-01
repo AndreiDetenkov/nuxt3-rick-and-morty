@@ -1,4 +1,23 @@
 
+## v2.4.1
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.4.0...v2.4.1)
+
+### 💅 Refactors
+
+- Incapsulate color mode btn ([5de552b](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/5de552b))
+- Update navigation ([0e29810](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/0e29810))
+
+### ✅ Tests
+
+- Update test ([7685d83](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/7685d83))
+- Updates in test ([5ce910a](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/5ce910a))
+- Update test ([b7fdeff](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/b7fdeff))
+
+### ❤️ Contributors
+
+- Andrei.detenkov <a.detenkov@gmail.com>
+
 ## v2.4.0
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.3.0...v2.4.0)
