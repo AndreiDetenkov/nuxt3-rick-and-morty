@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { StatusEnum } from '~/stores/types'
+import { StatusEnum } from '~/shared/types'
 
 const props = defineProps<{ status: string }>()
 

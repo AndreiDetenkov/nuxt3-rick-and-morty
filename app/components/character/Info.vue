@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { Button } from '~/components/ui/button'
-import type { LocationProp } from '~/shared/types'
-import type { Character } from '~/stores/types'
+import type { Character, LocationProp } from '~/shared/types'
 
 const { character } = defineProps<{
   character: Character

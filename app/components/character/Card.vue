@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Card from '~/components/ui/card/Card.vue'
-import type { Character } from '~/stores/types'
+import type { Character } from '~/shared/types'
 
 const { character } = defineProps<{ character: Character }>()
 </script>
