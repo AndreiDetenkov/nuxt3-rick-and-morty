@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest'
 import LocationLink from '~/components/character/info/LocationLink.vue'
 
 describe('character info location link component', () => {
-  const locationPropTest = {
+  const locationProp = {
     name: 'Citadel of Ricks',
     id: '3',
   }
@@ -11,19 +11,23 @@ describe('character info location link component', () => {
   it('should render location link', () => {
     const wrapper = shallowMount(LocationLink, {
       props: {
-        location: locationPropTest,
+        location: locationProp,
       },
       global: {
         stubs: {
           'nuxt-link': {
-            template: '<a><slot/></a>',
+            template: '<a :to="JSON.stringify(to)"><slot/></a>',
+            props: ['to'],
           },
         },
       },
     })
 
-    expect(wrapper.find('[data-test="location"]').exists()).toBe(true)
-    expect(wrapper.find('[data-test="link"]').attributes('to')).toBe(`/location/${locationPropTest.id}`)
-    expect(wrapper.find('[data-test="link"]').text()).toEqual(`Location - ${locationPropTest.name}`)
+    const link = wrapper.find('[data-test="location-link"]')
+    expect(link.attributes('to')).toEqual(JSON.stringify({
+      name: 'location-id',
+      params: { id: locationProp.id },
+    }))
+    expect(wrapper.text()).toContain(`Location: ${locationProp.name}`)
   })
 })
