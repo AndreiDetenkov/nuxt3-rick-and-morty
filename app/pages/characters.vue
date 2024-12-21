@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Search } from 'lucide-vue-next'
 import { Pagination, PaginationEllipsis, PaginationFirst, PaginationLast, PaginationList, PaginationListItem, PaginationNext, PaginationPrev } from '~/components/ui/pagination'
 
 useSeoMeta({
@@ -21,6 +24,15 @@ const { data } = await useAsyncData(
 
 <template>
   <section-characters v-if="data">
+    <template #search>
+      <div class="relative flex w-full max-w-sm items-center gap-1.5 mb-10">
+        <Input id="search" type="text" placeholder="Search..." class="pl-10" />
+        <span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
+          <Search class="size-6 text-muted-foreground text-primary dark:text-primary-light" />
+        </span>
+      </div>
+    </template>
+
     <character-card
       v-for="character in data.results"
       :key="character.id.toString()"
