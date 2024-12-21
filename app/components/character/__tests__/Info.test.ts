@@ -1,7 +1,7 @@
+import type { Character } from '~/shared/types'
 import { enableAutoUnmount, shallowMount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import Info from '~/components/character/Info.vue'
-import type { Character } from '~/shared/types'
 
 const characterMock = {
   id: 1,
