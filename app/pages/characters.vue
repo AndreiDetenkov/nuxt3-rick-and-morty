@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import type { CharactersByPage } from '~/shared/types'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Search } from 'lucide-vue-next'
+import SearchCharacterInput from '~/components/SearchCharacterInput.vue'
 import { Pagination, PaginationEllipsis, PaginationFirst, PaginationLast, PaginationList, PaginationListItem, PaginationNext, PaginationPrev } from '~/components/ui/pagination'
 
 useSeoMeta({
@@ -12,36 +12,31 @@ useSeoMeta({
   ogImage: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
 })
 
+const characters = ref<CharactersByPage>()
 const currentPage = ref(1)
 
 const { $api } = useNuxtApp()
-const { data } = await useAsyncData(
-  `characters.scope.${currentPage.value}`,
-  () => $api.characters.getByPage(currentPage.value),
-  { watch: [currentPage] },
-)
+const { data } = await useAsyncData(() => $api.characters.getByPage(currentPage.value))
+if (data.value) {
+  characters.value = data.value
+}
 </script>
 
 <template>
-  <section-characters v-if="data">
+  <SectionCharacters v-if="characters?.results">
     <template #search>
-      <div class="relative flex w-full max-w-sm items-center gap-1.5 mb-10">
-        <Input id="search" type="text" placeholder="Search..." class="pl-10" />
-        <span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
-          <Search class="size-6 text-muted-foreground text-primary dark:text-primary-light" />
-        </span>
-      </div>
+      <SearchCharacterInput />
     </template>
 
-    <character-card
-      v-for="character in data.results"
+    <CharacterCard
+      v-for="character in characters?.results"
       :key="character.id.toString()"
       :character="character"
     />
 
     <template #pagination>
       <div class="mt-10 flex justify-center">
-        <Pagination v-slot="{ page }" :total="data.info.count" :items-per-page="20" show-edges :sibling-count="1" :default-page="currentPage">
+        <Pagination v-slot="{ page }" :total="characters?.info.count" :items-per-page="20" show-edges :sibling-count="1" :default-page="currentPage">
           <PaginationList v-slot="{ items }" class="flex items-center gap-1">
             <PaginationFirst @click="currentPage = 1" />
             <PaginationPrev @click="currentPage--" />
@@ -56,10 +51,10 @@ const { data } = await useAsyncData(
             </template>
 
             <PaginationNext @click="currentPage++" />
-            <PaginationLast @click="currentPage = data.info.pages" />
+            <PaginationLast @click="currentPage = characters?.info.pages" />
           </PaginationList>
         </Pagination>
       </div>
     </template>
-  </section-characters>
+  </SectionCharacters>
 </template>
