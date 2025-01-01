@@ -29,7 +29,7 @@ async function setCharacter(searchValue: string) {
 <template>
   <SectionCharacters>
     <template #search>
-      <SearchCharacterInput @search="setCharacter" />
+      <SearchCharacterInput placeholder="Type character's name" @search="setCharacter" />
     </template>
 
     <CharacterCard

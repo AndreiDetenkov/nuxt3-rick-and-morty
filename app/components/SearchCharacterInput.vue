@@ -2,6 +2,10 @@
 import { Search } from 'lucide-vue-next'
 import { Input } from '~/components/ui/input'
 
+defineProps<{
+  placeholder: string
+}>()
+
 const emit = defineEmits<{
   search: [searchValue: string]
 }>()
@@ -15,7 +19,7 @@ const searchValue = ref('')
       id="search"
       v-model="searchValue"
       type="text"
-      placeholder="Type character's name"
+      :placeholder="placeholder"
       class="pl-10"
       @keyup.enter="emit('search', searchValue)"
     />
