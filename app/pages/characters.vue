@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { CharactersByPage } from '~/shared/types'
 import { Button } from '@/components/ui/button'
 import SearchCharacterInput from '~/components/SearchCharacterInput.vue'
 import { Pagination, PaginationEllipsis, PaginationFirst, PaginationLast, PaginationList, PaginationListItem, PaginationNext, PaginationPrev } from '~/components/ui/pagination'
@@ -12,31 +11,36 @@ useSeoMeta({
   ogImage: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
 })
 
-const characters = ref<CharactersByPage>()
+const searchCharacter = ref<string>()
 const currentPage = ref(1)
 
 const { $api } = useNuxtApp()
-const { data } = await useAsyncData(() => $api.characters.getByPage(currentPage.value))
-if (data.value) {
-  characters.value = data.value
+const { data: charactersData } = await useAsyncData('characters', () => $api.characters.filterCharacters(currentPage.value, searchCharacter.value), {
+  watch: [currentPage, searchCharacter],
+})
+
+// const isCharacters = computed<boolean>(() => charactersData.value?.results.length > 0)
+
+async function setCharacter(searchValue: string) {
+  searchCharacter.value = searchValue
 }
 </script>
 
 <template>
-  <SectionCharacters v-if="characters?.results">
+  <SectionCharacters>
     <template #search>
-      <SearchCharacterInput />
+      <SearchCharacterInput @search="setCharacter" />
     </template>
 
     <CharacterCard
-      v-for="character in characters?.results"
+      v-for="character in charactersData?.results"
       :key="character.id.toString()"
       :character="character"
     />
 
     <template #pagination>
       <div class="mt-10 flex justify-center">
-        <Pagination v-slot="{ page }" :total="characters?.info.count" :items-per-page="20" show-edges :sibling-count="1" :default-page="currentPage">
+        <Pagination v-slot="{ page }" :total="charactersData?.info.count" :items-per-page="20" show-edges :sibling-count="1" :default-page="currentPage">
           <PaginationList v-slot="{ items }" class="flex items-center gap-1">
             <PaginationFirst @click="currentPage = 1" />
             <PaginationPrev @click="currentPage--" />
