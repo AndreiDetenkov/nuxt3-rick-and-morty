@@ -12,13 +12,12 @@ const { data: characters } = await useAsyncData('randomCharacters', () => $api.c
 </script>
 
 <template>
-  <section-hero />
-
-  <section-characters>
-    <character-card
+  <SectionHero />
+  <SectionCharacters>
+    <CharacterCard
       v-for="character in characters"
       :key="character.created"
       :character="character"
     />
-  </section-characters>
+  </SectionCharacters>
 </template>
