@@ -19,7 +19,7 @@ const { data: charactersData } = await useAsyncData('characters', () => $api.cha
   watch: [currentPage, searchCharacter],
 })
 
-// const isCharacters = computed<boolean>(() => charactersData.value?.results.length > 0)
+// const isCharacters = computed(() => charactersData.value && charactersData.value?.results.length > 0)
 
 async function setCharacter(searchValue: string) {
   searchCharacter.value = searchValue
@@ -55,7 +55,7 @@ async function setCharacter(searchValue: string) {
             </template>
 
             <PaginationNext @click="currentPage++" />
-            <PaginationLast @click="currentPage = characters?.info.pages" />
+            <PaginationLast @click="currentPage = charactersData?.info.pages" />
           </PaginationList>
         </Pagination>
       </div>

@@ -1,3 +1,4 @@
+import type { CharactersRepository } from '~/repository/characters'
 import { createCharactersRepository } from '~/repository/characters'
 
 export default defineNuxtPlugin({
@@ -10,7 +11,7 @@ export default defineNuxtPlugin({
     })
 
     const api = {
-      characters: createCharactersRepository(appFetch),
+      characters: createCharactersRepository(appFetch) as CharactersRepository,
     }
 
     return {

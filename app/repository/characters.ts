@@ -5,26 +5,25 @@ import { generateRandomNumbers } from '~/shared/randomNumbers'
 export interface CharactersRepository {
   getRandom: () => Promise<Character[]>
   getById: (id: number) => Promise<Character>
-  getByPage: (page: number) => Promise<CharactersByPage>
-  searchByName: (name: string) => Promise<CharactersByPage>
+  filterCharacters: (page: number, name: string) => Promise<CharactersByPage>
 }
 
 export function createCharactersRepository(appFetch: $Fetch): CharactersRepository {
   return {
-    getRandom() {
+    getRandom(): Promise<Character[]> {
       const ids: number[] = generateRandomNumbers()
       return appFetch(`/character/${ids}`, {
         method: 'GET',
       })
     },
 
-    getById(id: number) {
+    getById(id: number): Promise<Character> {
       return appFetch(`/character/${id}`, {
         method: 'GET',
       })
     },
 
-    filterCharacters(page: number, name: string) {
+    filterCharacters(page: number, name: string): Promise<CharactersByPage> {
       return appFetch(`/character`, {
         method: 'GET',
         params: {
