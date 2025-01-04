@@ -1,5 +1,5 @@
 import type { Character } from '~/shared/types'
-import { enableAutoUnmount, shallowMount } from '@vue/test-utils'
+import { enableAutoUnmount, shallowMount, type VueWrapper } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import Info from '~/components/character/Info.vue'
 
@@ -13,13 +13,18 @@ const characterMock = {
   origin: { name: 'Earth (C-137)', url: 'https://rickandmortyapi.com/api/location/1' },
   location: { name: 'Citadel of Ricks', url: 'https://rickandmortyapi.com/api/location/3' },
   image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-  episode: ['https://rickandmortyapi.com/api/episode/9', 'https://rickandmortyapi.com/api/episode/24'],
+  episode: [
+    'https://rickandmortyapi.com/api/episode/9',
+    'https://rickandmortyapi.com/api/episode/24',
+  ],
   url: 'https://rickandmortyapi.com/api/character/1',
   created: '2017-11-04T18:48:46.250Z',
 } as Character
 
 describe('info component', () => {
-  let wrapper: any
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
+  let wrapper: VueWrapper<any>
+
   enableAutoUnmount(afterEach)
 
   beforeEach(() => {

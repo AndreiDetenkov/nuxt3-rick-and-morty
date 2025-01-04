@@ -7,11 +7,14 @@ import { type ButtonVariants, buttonVariants } from '.'
 interface Props extends PrimitiveProps {
   variant?: ButtonVariants['variant']
   size?: ButtonVariants['size']
+  // eslint-disable-next-line vue/require-default-prop
   class?: HTMLAttributes['class']
 }
 
 const props = withDefaults(defineProps<Props>(), {
   as: 'button',
+  variant: 'default',
+  size: 'default',
 })
 </script>
 

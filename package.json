@@ -1,5 +1,5 @@
 {
-  "name": "rick-and-morty-app",
+  "name": "rick-and-morty",
   "type": "module",
   "version": "2.4.1",
   "private": true,
@@ -18,7 +18,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "eslint --fix-dry-run .",
     "release": "npx changelogen@latest --release --push",
     "test": "vitest",
     "coverage": "vitest run --coverage"
@@ -65,7 +65,7 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*.ts,*.vue": [
+    "*": [
       "eslint . --fix",
       "prettier . --write"
     ]

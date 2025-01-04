@@ -22,7 +22,8 @@ vi.mock('assets/icons/twitter.svg', () => ({
 }))
 
 describe('footer', () => {
-  let wrapper: VueWrapper
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
+  let wrapper: VueWrapper<any>
 
   beforeEach(() => {
     wrapper = mount(Footer, {

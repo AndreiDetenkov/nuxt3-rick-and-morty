@@ -1,11 +1,12 @@
-import { enableAutoUnmount, shallowMount } from '@vue/test-utils'
+import { enableAutoUnmount, shallowMount, type VueWrapper } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import EpisodeLink from '~/components/character/info/EpisodeLinks.vue'
 
 const episodesProp = ['S01E01', 'S01E02', 'S01E03']
 
 describe('character info episode link component', () => {
-  let wrapper: any
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
+  let wrapper: VueWrapper<any>
 
   beforeEach(() => {
     wrapper = shallowMount(EpisodeLink, {
