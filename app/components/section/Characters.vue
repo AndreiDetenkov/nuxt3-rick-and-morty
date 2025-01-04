@@ -1,9 +1,9 @@
 <template>
-  <section class="py-10 lg:py-20 border-b dark:border-b-primary border-t dark:border-t-primary">
+  <section class="border-b border-t py-10 dark:border-b-primary dark:border-t-primary lg:py-20">
     <base-container>
       <slot name="search" />
 
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         <slot />
       </div>
 

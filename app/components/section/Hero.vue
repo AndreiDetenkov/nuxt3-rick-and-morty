@@ -4,7 +4,7 @@ import IconHero from '~/assets/icons/hero.svg'
 
 <template>
   <section class="h-[calc(40vh)] pt-4">
-    <div class="relative grid place-items-center h-full">
+    <div class="relative grid h-full place-items-center">
       <h1
         class="z-10 text-center text-5xl font-black text-title dark:text-primary-light sm:text-6xl md:text-7xl lg:text-8xl"
       >

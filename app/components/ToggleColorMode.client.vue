@@ -16,7 +16,7 @@ function toggleColorMode(): void {
 <template>
   <button
     data-test="toggle-button"
-    class="border rounded-lg hover:border-primary dark:border-primary dark:hover:border-primary-light transition duration-300 flex items-center justify-center p-2"
+    class="flex items-center justify-center rounded-lg border p-2 transition duration-300 hover:border-primary dark:border-primary dark:hover:border-primary-light"
     @click="toggleColorMode"
   >
     <IconSun v-if="isDarkMode" data-test="sun" class="h-4 w-4" />

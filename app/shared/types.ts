@@ -32,8 +32,7 @@ export interface CharacterFilter {
   page?: number
 }
 
-export interface LocationFilter
-  extends Pick<CharacterFilter, 'name' | 'type' | 'page'> {
+export interface LocationFilter extends Pick<CharacterFilter, 'name' | 'type' | 'page'> {
   dimension?: string
 }
 

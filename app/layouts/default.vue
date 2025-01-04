@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="h-dvh w-dvw flex flex-col">
+  <div class="flex h-dvh w-dvw flex-col">
     <header>
       <BaseHeader>
         <template #logo>

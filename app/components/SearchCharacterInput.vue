@@ -14,7 +14,7 @@ const searchValue = ref('')
 </script>
 
 <template>
-  <div class="relative flex w-full max-w-sm items-center gap-1.5 mb-10">
+  <div class="relative mb-10 flex w-full max-w-sm items-center gap-1.5">
     <Input
       id="search"
       v-model="searchValue"
@@ -23,8 +23,8 @@ const searchValue = ref('')
       class="pl-10"
       @keyup.enter="emit('search', searchValue)"
     />
-    <span class="absolute start-0 inset-y-0 flex items-center justify-center px-2">
-      <Search class="size-6 text-muted-foreground text-primary dark:text-primary-light" />
+    <span class="absolute inset-y-0 start-0 flex items-center justify-center px-2">
+      <Search class="text-muted-foreground size-6 text-primary dark:text-primary-light" />
     </span>
   </div>
 </template>

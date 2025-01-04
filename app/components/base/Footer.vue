@@ -12,7 +12,7 @@ const navItems = [
 
 <template>
   <footer data-test="footer">
-    <base-container class="flex items-center justify-center px-4 py-6 space-x-6">
+    <base-container class="flex items-center justify-center space-x-6 px-4 py-6">
       <nuxt-link
         v-for="item in navItems"
         :key="item.testId"
@@ -23,7 +23,7 @@ const navItems = [
       >
         <component
           :is="item.icon"
-          class="w-6 h-6 fill-primary-light hover:fill-orange-400 transition duration-300"
+          class="h-6 w-6 fill-primary-light transition duration-300 hover:fill-orange-400"
         />
       </nuxt-link>
     </base-container>

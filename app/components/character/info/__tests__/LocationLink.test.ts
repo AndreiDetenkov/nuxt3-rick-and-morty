@@ -24,10 +24,12 @@ describe('character info location link component', () => {
     })
 
     const link = wrapper.find('[data-test="location-link"]')
-    expect(link.attributes('to')).toEqual(JSON.stringify({
-      name: 'location-id',
-      params: { id: locationProp.id },
-    }))
+    expect(link.attributes('to')).toEqual(
+      JSON.stringify({
+        name: 'location-id',
+        params: { id: locationProp.id },
+      }),
+    )
     expect(wrapper.text()).toContain(`Location: ${locationProp.name}`)
   })
 })

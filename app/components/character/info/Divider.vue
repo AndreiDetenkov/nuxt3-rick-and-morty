@@ -1,3 +1,3 @@
 <template>
-  <hr class="border-t border-t-neutral-200 my-4 dark:border-t-primary">
+  <hr class="my-4 border-t border-t-neutral-200 dark:border-t-primary" />
 </template>

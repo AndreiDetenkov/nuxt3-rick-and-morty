@@ -14,14 +14,14 @@ const location = computed<LocationProp>(() => {
 })
 
 const episodes = computed<string[]>(() => {
-  return character.episode.map((item: string) => (item.split('/').slice(-1).join('')))
+  return character.episode.map((item: string) => item.split('/').slice(-1).join(''))
 })
 </script>
 
 <template>
   <Card data-test="info" class="grid grid-cols-1 md:grid-cols-auto-1fr md:justify-start">
     <div class="m-4 grid place-items-center md:place-items-start">
-      <lazy-nuxt-img :src="character.image" class="rounded-lg w-max-80 w-full md:w-80 md:h-80" />
+      <lazy-nuxt-img :src="character.image" class="w-max-80 w-full rounded-lg md:h-80 md:w-80" />
     </div>
     <div>
       <card-header>
@@ -42,9 +42,7 @@ const episodes = computed<string[]>(() => {
       </card-content>
 
       <card-footer>
-        <Button class="mt-4" @click.prevent="$router.back()">
-          Back
-        </Button>
+        <Button class="mt-4" @click.prevent="$router.back()"> Back </Button>
       </card-footer>
     </div>
   </Card>

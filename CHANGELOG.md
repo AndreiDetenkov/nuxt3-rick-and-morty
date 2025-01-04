@@ -1,4 +1,3 @@
-
 ## v2.4.1
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.4.0...v2.4.1)
@@ -132,7 +131,7 @@
 - **pagination:** Wip ([3b39434](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/3b39434))
 - Implement use env variables composable ([2e6460d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/2e6460d))
 - Update pagination component ([36cfda8](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/36cfda8))
-- **app:** ⚠️  Upgrade nuxt compatibility version to 4 ([1a7937d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/1a7937d))
+- **app:** ⚠️ Upgrade nuxt compatibility version to 4 ([1a7937d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/1a7937d))
 - Create custom $fetch and useFetch ([5d39db2](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/5d39db2))
 - Implement characters repository ([e78c0e7](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/e78c0e7))
 
@@ -177,7 +176,7 @@
 
 #### ⚠️ Breaking Changes
 
-- **app:** ⚠️  Upgrade nuxt compatibility version to 4 ([1a7937d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/1a7937d))
+- **app:** ⚠️ Upgrade nuxt compatibility version to 4 ([1a7937d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/1a7937d))
 
 ### ❤️ Contributors
 
@@ -327,4 +326,3 @@
 ### ❤️ Contributors
 
 - AndreiDetenkov
-

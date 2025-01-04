@@ -13,20 +13,14 @@ const { character } = defineProps<{ character: Character }>()
     <lazy-nuxt-img
       :src="character.image"
       :alt="character.name"
-      class="w-full h-62 lg:h-54 object-fill rounded-t-lg"
+      class="h-62 lg:h-54 w-full rounded-t-lg object-fill"
     />
     <card-header>
       <card-title data-test="character-title">
         {{ character.name }}
       </card-title>
-      <div
-        data-test="character-status"
-        class="flex items-center"
-      >
-        <live-indicator
-          data-test="character-status-indicator"
-          :status="character.status"
-        />
+      <div data-test="character-status" class="flex items-center">
+        <live-indicator data-test="character-status-indicator" :status="character.status" />
         {{ character.status }} - {{ character.species }}
       </div>
     </card-header>

@@ -15,6 +15,8 @@ describe('nav item component', () => {
     })
 
     expect(wrapper.find('[data-test="nav-item"]').exists()).toBe(true)
-    expect(wrapper.findComponent('[data-test="nav-item"]').attributes('to')).toBe(mockPropsData.path)
+    expect(wrapper.findComponent('[data-test="nav-item"]').attributes('to')).toBe(
+      mockPropsData.path,
+    )
   })
 })

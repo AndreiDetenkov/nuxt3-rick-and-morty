@@ -10,6 +10,7 @@ const { location } = defineProps<{ location: LocationProp }>()
     :to="{ name: 'location-id', params: { id: location.id } }"
     class="text-lg font-medium"
   >
-    Location: <span class="transition-colors duration-300 hover:text-orange-400">{{ location.name }}</span>
+    Location:
+    <span class="transition-colors duration-300 hover:text-orange-400">{{ location.name }}</span>
   </NuxtLink>
 </template>

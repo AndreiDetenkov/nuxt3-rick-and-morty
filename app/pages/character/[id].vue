@@ -2,7 +2,9 @@
 const { id } = useRoute().params
 const { $api } = useNuxtApp()
 
-const { data: character } = await useAsyncData(`character:${id}`, () => $api.characters.getById(Number(id)))
+const { data: character } = await useAsyncData(`character:${id}`, () =>
+  $api.characters.getById(Number(id)),
+)
 
 useSeoMeta({
   title: () => `${character.value?.name}`,
