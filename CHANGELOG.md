@@ -1,3 +1,46 @@
+## v2.5.0
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.4.1...v2.5.0)
+
+### 🚀 Enhancements
+
+- **search:** Implement search component into the characters page ([040cdc8](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/040cdc8))
+- Implement search input ([59733a9](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/59733a9))
+
+### 🩹 Fixes
+
+- **lint:** Fix lint errors ([51724c4](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/51724c4))
+- Eslint errors fixing ([afe282d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/afe282d))
+- Prettier and eslint fixing warnings ([5c9797d](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/5c9797d))
+- Improve scripts ([cc5fb5b](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/cc5fb5b))
+- Eslint and prettier warnings fixing ([19374f9](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/19374f9))
+
+### 💅 Refactors
+
+- Add local state for characters and page info ([7b318cc](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/7b318cc))
+- Refetch if search or paginate ([4d72044](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/4d72044))
+- Update characters repository ([9c4024c](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/9c4024c))
+- Update search input ([a122c25](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/a122c25))
+- Improve typing ([d5f80bf](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/d5f80bf))
+- Prettier fix ([b78c414](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/b78c414))
+
+### 🏡 Chore
+
+- Join styles into one place ([96cda1a](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/96cda1a))
+- **config:** Update paths in config ([46367b8](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/46367b8))
+- **config:** Update node version ([76c821e](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/76c821e))
+- **libs:** Update libs in the project ([56c0319](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/56c0319))
+- Update elsint config, add prettier ([e877923](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/e877923))
+- Upgrade Nuxt version to latest ([fec70f7](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/fec70f7))
+- Update package manager version ([961be58](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/961be58))
+- Update package manager version ([6458da4](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/6458da4))
+- Install husky and lint staged ([060113e](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/060113e))
+- Add rule for vue html warnings ([95988ef](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/95988ef))
+
+### ❤️ Contributors
+
+- Andrei.detenkov <a.detenkov@gmail.com>
+
 ## v2.4.1
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.4.0...v2.4.1)
