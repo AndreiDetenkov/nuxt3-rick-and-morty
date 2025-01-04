@@ -1,7 +1,7 @@
 import type { DOMWrapper, VueWrapper } from '@vue/test-utils'
 import { mount } from '@vue/test-utils'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import Footer from '~/components/base/Footer.vue'
+import { BaseFooter } from '#components'
 
 vi.mock('assets/icons/currency.svg', () => ({
   default: {
@@ -26,14 +26,11 @@ describe('footer', () => {
   let wrapper: VueWrapper<any>
 
   beforeEach(() => {
-    wrapper = mount(Footer, {
+    wrapper = mount(BaseFooter, {
       global: {
         stubs: {
           'base-container': {
             template: '<div><slot /></div>',
-          },
-          'nuxt-link': {
-            template: '<a :href="$attrs.to" :target="$attrs.target"><slot /></a>',
           },
         },
       },

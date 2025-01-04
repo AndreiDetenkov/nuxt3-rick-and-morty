@@ -1,7 +1,7 @@
 import type { Character } from '~/shared/types'
 import { enableAutoUnmount, shallowMount, type VueWrapper } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import Info from '~/components/character/Info.vue'
+import { CharacterInfo } from '#components'
 
 const characterMock = {
   id: 1,
@@ -28,7 +28,7 @@ describe('info component', () => {
   enableAutoUnmount(afterEach)
 
   beforeEach(() => {
-    wrapper = shallowMount(Info, {
+    wrapper = shallowMount(CharacterInfo, {
       props: {
         character: characterMock,
       },
