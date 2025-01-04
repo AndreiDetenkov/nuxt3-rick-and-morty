@@ -18,7 +18,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix-dry-run",
+    "lint:fix": "eslint --fix",
     "release": "npx changelogen@latest --release --push",
     "test": "vitest",
     "coverage": "vitest run --coverage",
@@ -62,10 +62,15 @@
     "vue-tsc": "^2.1.10"
   },
   "packageManager": "pnpm@9.15.1",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{ts,vue}": [
-      "prettier --write .",
-      "eslint --max-warnings 0 ."
+      "prettier --write",
+      "eslint --fix"
     ]
   }
 }
