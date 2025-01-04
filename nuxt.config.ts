@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-svgo',
     'shadcn-nuxt',
+    '@nuxt/eslint',
   ],
 
   tailwindcss: {
