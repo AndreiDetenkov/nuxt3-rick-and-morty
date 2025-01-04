@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  devtools: { enabled: false },
+  devtools: { enabled: true },
 
   runtimeConfig: {
     public: {

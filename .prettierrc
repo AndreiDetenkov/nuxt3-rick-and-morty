@@ -3,6 +3,6 @@
   "semi": false,
   "trailingComma": "all",
   "bracketSpacing": true,
-  "printWidth": 80,
+  "printWidth": 100,
   "plugins": ["prettier-plugin-tailwindcss"]
 }
