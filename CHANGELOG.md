@@ -1,3 +1,25 @@
+## v2.5.1
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.5.0...v2.5.1)
+
+### 💅 Refactors
+
+- Dockerfile refactoring ([d1b08f3](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/d1b08f3))
+
+### 📖 Documentation
+
+- Update README.md ([0541103](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/0541103))
+- Update README.md ([7a0838a](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/7a0838a))
+
+### 🏡 Chore
+
+- Dockerfile and docker-compose.yml files implemented ([9ce5e73](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/9ce5e73))
+- Add container name property ([857084e](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/857084e))
+
+### ❤️ Contributors
+
+- Andrei.detenkov <a.detenkov@gmail.com>
+
 ## v2.5.0
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.4.1...v2.5.0)
