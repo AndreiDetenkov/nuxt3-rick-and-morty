@@ -4,6 +4,7 @@
 
 - Node version: 22.12.0
 - Nuxt version: 3.15.0
+- Vite version: 3.5.13
 
-### [RIck and Morty API Free by Axel Fuhrmann](https://rickandmortyapi.com/documentation/#introduction)
+#### RIck and Morty [ API Free](https://rickandmortyapi.com/documentation/#introduction) by Axel Fuhrmann
 
