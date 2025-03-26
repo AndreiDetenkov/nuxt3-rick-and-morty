@@ -1,5 +1,5 @@
-import type { CharactersRepository } from '~/repository/characters'
-import { createCharactersRepository } from '~/repository/characters'
+import { charactersRepository } from '~/repository/characters'
+import { episodesRepository } from '~/repository/episodes'
 
 export default defineNuxtPlugin({
   name: 'fetch',
@@ -11,7 +11,8 @@ export default defineNuxtPlugin({
     })
 
     const api = {
-      characters: createCharactersRepository(appFetch) as CharactersRepository,
+      characters: charactersRepository(appFetch),
+      episodes: episodesRepository(appFetch),
     }
 
     return {

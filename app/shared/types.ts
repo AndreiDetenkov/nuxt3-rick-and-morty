@@ -75,6 +75,11 @@ export interface CharactersByPage {
   results: Character[]
 }
 
+export interface Episodes {
+  info: Info
+  results: Episode[]
+}
+
 export interface NavItem {
   name: string
   path: string

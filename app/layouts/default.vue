@@ -10,7 +10,7 @@
 
         <div class="w-full" />
 
-        <Navigation class="mr-4" />
+        <Navigation class="mr-8" />
         <ToggleColorMode />
       </BaseHeader>
     </header>

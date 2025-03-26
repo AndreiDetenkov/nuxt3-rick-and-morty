@@ -8,7 +8,7 @@ export interface CharactersRepository {
   filterCharacters: (page: number, name: string) => Promise<CharactersByPage>
 }
 
-export function createCharactersRepository(appFetch: $Fetch): CharactersRepository {
+export function charactersRepository(appFetch: $Fetch): CharactersRepository {
   return {
     getRandom(): Promise<Character[]> {
       const ids: number[] = generateRandomNumbers()
