@@ -1,14 +1,33 @@
 <script setup lang="ts">
 const { $api } = useNuxtApp()
 const { data: episodes } = await useAsyncData('episodes', () => $api.episodes.getAll())
+
+const episodesExist = computed<boolean>(() => !!episodes.value?.results.length)
 </script>
 
 <template>
   <BaseSection>
-    <Card v-for="episode in episodes?.results" :key="episode.id">
-      <CardHeader>
-        <CardTitle>{{ episode.name }}</CardTitle>
-      </CardHeader>
-    </Card>
+    <template v-if="episodesExist">
+      <Card v-for="episode in episodes?.results" :key="episode.id">
+        <CardHeader>
+          <CardTitle>{{ episode.name }}</CardTitle>
+          <CardDescription>{{ episode.episode }}</CardDescription>
+          <CardContent>
+            Characters:
+            <NuxtLink
+              v-for="(item, index) in episode.characters"
+              :key="`item${index}`"
+              class="mr-2 inline-flex transition-colors duration-300 hover:text-orange-400"
+              :to="{
+                name: 'character-id',
+                params: { id: item.split('/').slice(-1).join('/') },
+              }"
+            >
+              {{ item.split('/').slice(-1).join('/') }}
+            </NuxtLink>
+          </CardContent>
+        </CardHeader>
+      </Card>
+    </template>
   </BaseSection>
 </template>
