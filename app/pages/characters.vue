@@ -47,7 +47,7 @@ async function setCharacter(searchValue: string) {
 </script>
 
 <template>
-  <SectionCharacters>
+  <BaseSection>
     <template #search>
       <SearchCharacterInput placeholder="Type character's name" @search="setCharacter" />
     </template>
@@ -98,5 +98,5 @@ async function setCharacter(searchValue: string) {
         </Pagination>
       </div>
     </template>
-  </SectionCharacters>
+  </BaseSection>
 </template>

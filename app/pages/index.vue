@@ -14,14 +14,12 @@ const { data: characters } = await useAsyncData('randomCharacters', () =>
 </script>
 
 <template>
-  <div>
-    <SectionHero />
-    <SectionCharacters>
-      <CharacterCard
-        v-for="character in characters"
-        :key="character.created"
-        :character="character"
-      />
-    </SectionCharacters>
-  </div>
+  <SectionHero />
+  <BaseSection>
+    <CharacterCard
+      v-for="character in characters"
+      :key="character.created"
+      :character="character"
+    />
+  </BaseSection>
 </template>
