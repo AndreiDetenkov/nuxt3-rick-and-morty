@@ -12,5 +12,6 @@ export default withNuxt({
         },
       },
     ],
+    'vue/no-multiple-template-root': 'off',
   },
 })
