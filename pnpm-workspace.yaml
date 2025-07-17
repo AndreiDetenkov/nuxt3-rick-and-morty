@@ -1,2 +1,7 @@
+ignoredBuiltDependencies:
+  - '@parcel/watcher'
+  - unrs-resolver
+  - vue-demi
+
 onlyBuiltDependencies:
   - esbuild
