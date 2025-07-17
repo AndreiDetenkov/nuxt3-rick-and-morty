@@ -3,6 +3,10 @@ const { $api } = useNuxtApp()
 const { data: episodes } = await useAsyncData('episodes', () => $api.episodes.getAll())
 
 const episodesExist = computed<boolean>(() => !!episodes.value?.results.length)
+
+function getCharacterId(item: string) {
+  return item.split('/').slice(-1).join('/')
+}
 </script>
 
 <template>
@@ -20,10 +24,10 @@ const episodesExist = computed<boolean>(() => !!episodes.value?.results.length)
               class="mr-2 inline-flex transition-colors duration-300 hover:text-orange-400"
               :to="{
                 name: 'character-id',
-                params: { id: item.split('/').slice(-1).join('/') },
+                params: { id: getCharacterId(item) },
               }"
             >
-              {{ item.split('/').slice(-1).join('/') }}
+              {{ getCharacterId(item) }}
             </NuxtLink>
           </CardContent>
         </CardHeader>
