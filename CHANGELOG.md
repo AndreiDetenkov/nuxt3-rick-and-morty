@@ -1,3 +1,38 @@
+## v2.6.0
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.5.1...v2.6.0)
+
+### 🚀 Enhancements
+
+- Add Episodes page and update navigation ([f1a77fd](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/f1a77fd))
+- Implement episodes repository and update episodes page with data fetching ([1c6a545](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/1c6a545))
+
+### 🩹 Fixes
+
+- Adjust body dimensions to use percentage for better responsiveness ([aefbd8a](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/aefbd8a))
+
+### 💅 Refactors
+
+- Simplify LiveIndicator status styling with utility function ([a6e712f](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/a6e712f))
+- Unify and replace `SectionCharacters` with `BaseSection` across components ([ad1f223](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/ad1f223))
+- Enhance Episodes page structure ([31074eb](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/31074eb))
+- Extract `getCharacterId` utility for cleaner Episodes page logic ([0e55d22](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/0e55d22))
+
+### 🏡 Chore
+
+- Update Node.js version ([c14435b](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/c14435b))
+- Update dependencies in pnpm-lock.yaml to latest compatible versions ([4c26d60](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/4c26d60))
+- Add pnpm-workspace.yaml with built dependencies configuration ([ef9886f](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/ef9886f))
+- Update dependencies in pnpm-lock.yaml to latest versions ([2a9a15c](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/2a9a15c))
+- Add Chrome DevTools workspace configuration file ([9b8d897](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/9b8d897))
+- Update Tailwind CSS config paths for consistency ([b78e898](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/b78e898))
+- Update pnpm version in CI workflow to 10.x ([4aef1e2](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/4aef1e2))
+- Update pnpm version in CI workflow to 10.13.1 ([f1cd077](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/f1cd077))
+
+### ❤️ Contributors
+
+- Andrei.detenkov <a.detenkov@gmail.com>
+
 ## v2.5.1
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.5.0...v2.5.1)
