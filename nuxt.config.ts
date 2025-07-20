@@ -25,7 +25,8 @@ export default defineNuxtConfig({
   ],
 
   image: {
-    provider: 'Netlify',
+    provider: 'netlifyImageCdn',
+    domains: ['rickandmortyapi.com'],
   },
 
   tailwindcss: {

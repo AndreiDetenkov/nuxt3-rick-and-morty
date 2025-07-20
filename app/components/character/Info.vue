@@ -21,7 +21,12 @@ const episodes = computed<string[]>(() => {
 <template>
   <Card data-test="info" class="grid grid-cols-1 md:grid-cols-auto-1fr md:justify-start">
     <div class="m-4 grid place-items-center md:place-items-start">
-      <lazy-nuxt-img :src="character.image" class="w-max-80 w-full rounded-lg md:h-80 md:w-80" />
+      <nuxt-img
+        :src="character.image"
+        class="w-max-80 w-full rounded-lg md:h-80 md:w-80"
+        placeholder
+        loading="lazy"
+      />
     </div>
     <div>
       <card-header>
