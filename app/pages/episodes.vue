@@ -22,10 +22,7 @@ function getCharacterId(item: string) {
               v-for="(item, index) in episode.characters"
               :key="`item${index}`"
               class="mr-2 inline-flex transition-colors duration-300 hover:text-orange-400"
-              :to="{
-                name: 'character-id',
-                params: { id: getCharacterId(item) },
-              }"
+              :to="{ name: 'character-id', params: { id: getCharacterId(item) } }"
             >
               {{ getCharacterId(item) }}
             </NuxtLink>

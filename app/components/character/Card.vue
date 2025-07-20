@@ -10,10 +10,12 @@ const { character } = defineProps<{ character: Character }>()
     class="cursor-pointer"
     @click="navigateTo({ name: 'character-id', params: { id: character.id } })"
   >
-    <lazy-nuxt-img
+    <nuxt-img
       :src="character.image"
       :alt="character.name"
       class="h-62 lg:h-54 w-full rounded-t-lg object-fill"
+      placeholder
+      loading="lazy"
     />
     <card-header>
       <card-title data-test="character-title">

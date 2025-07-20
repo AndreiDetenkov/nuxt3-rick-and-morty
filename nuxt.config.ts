@@ -24,6 +24,10 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
   ],
 
+  image: {
+    provider: 'Netlify',
+  },
+
   tailwindcss: {
     cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'last' }],
     configPath: '~/tailwind.config.ts',
