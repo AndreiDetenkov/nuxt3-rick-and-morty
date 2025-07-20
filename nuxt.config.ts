@@ -24,11 +24,6 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
   ],
 
-  image: {
-    provider: 'netlifyImageCdn',
-    domains: ['rickandmortyapi.com'],
-  },
-
   tailwindcss: {
     cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'last' }],
     configPath: '~/tailwind.config.ts',
