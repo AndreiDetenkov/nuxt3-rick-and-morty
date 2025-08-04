@@ -1,7 +1,5 @@
-<script setup lang="ts"></script>
-
 <template>
-  <div class="flex h-dvh w-dvw flex-col">
+  <div class="grid min-h-screen grid-rows-[auto_1fr_auto]">
     <header>
       <BaseHeader>
         <template #logo>
@@ -16,8 +14,7 @@
     </header>
 
     <main class="flex-1">
-      <!--      <slot />-->
-      <h1>Index page</h1>
+      <slot />
     </main>
 
     <footer>

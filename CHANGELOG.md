@@ -1,3 +1,25 @@
+## v2.7.0
+
+[compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.6.0...v2.7.0)
+
+### 🚀 Enhancements
+
+- Add image optimization with Netlify provider ([590df5c](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/590df5c))
+- Replace lazy-nuxt-img with nuxt-img for better optimization and update Netlify image provider config ([1df5a37](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/1df5a37))
+
+### 🏡 Chore
+
+- Simplify pre-commit hook to only run lint-staged ([f7a3462](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/f7a3462))
+- Remove unused Netlify image provider configuration ([247c4b1](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/247c4b1))
+- Update Nuxt to version 4 ([cb9b211](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/cb9b211))
+- Remove shadcn-vue components and dependencies and install nuxt-ui ([2198e6e](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/2198e6e))
+- Replace `base-container` tag with `BaseContainer` component ([694b3da](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/694b3da))
+- Replace `TheContainer` with `BaseContainer` ([d477f54](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/commit/d477f54))
+
+### ❤️ Contributors
+
+- Andrei.detenkov <a.detenkov@gmail.com>
+
 ## v2.6.0
 
 [compare changes](https://github.com/AndreiDetenkov/nuxt3-rick-and-morty/compare/v2.5.1...v2.6.0)

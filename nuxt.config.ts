@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/test-utils/module', '@nuxt/image', 'nuxt-svgo', '@nuxt/eslint', '@nuxt/ui'],
+  modules: ['@nuxt/test-utils/module', '@nuxt/image', '@nuxt/eslint', '@nuxt/ui'],
 
   ui: {
     prefix: 'base',
@@ -17,9 +17,5 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [{ name: 'Poppins', provider: 'google' }],
-  },
-
-  svgo: {
-    defaultImport: 'component',
   },
 })

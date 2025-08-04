@@ -1,7 +1,7 @@
 {
   "name": "rick-and-morty",
   "type": "module",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "private": true,
   "author": {
     "name": "Andrei Detenkov",
@@ -44,7 +44,6 @@
     "happy-dom": "^18.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.4",
-    "nuxt-svgo": "^4.2.4",
     "playwright-core": "^1.54.1",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
