@@ -30,6 +30,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.459.0",
+    "nuxt": "4.0.2",
     "radix-vue": "^1.9.17",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
@@ -50,7 +51,6 @@
     "happy-dom": "^15.11.7",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
-    "nuxt": "3.16.0",
     "nuxt-svgo": "^4.2.4",
     "playwright-core": "^1.54.1",
     "prettier": "^3.6.2",
@@ -61,7 +61,7 @@
     "vitest": "3.0.5",
     "vue-tsc": "^2.2.12"
   },
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
