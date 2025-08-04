@@ -1,5 +1,5 @@
 <template>
-  <base-container class="py-8 md:py-10 lg:py-20">
+  <BaseContainer class="py-8 md:py-10 lg:py-20">
     <slot />
-  </base-container>
+  </BaseContainer>
 </template>
