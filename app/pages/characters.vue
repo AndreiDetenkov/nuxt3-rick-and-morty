@@ -83,7 +83,7 @@ async function setCharacter(searchValue: string) {
               >
                 <Button
                   class="h-10 w-10 p-0"
-                  :variant="item.value === page ? 'default' : 'outline'"
+                  :variant="item.value === page ? 'default' : 'outline-solid'"
                   @click="currentPage = item.value"
                 >
                   {{ item.value }}

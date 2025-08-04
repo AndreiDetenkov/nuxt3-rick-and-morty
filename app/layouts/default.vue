@@ -16,7 +16,8 @@
     </header>
 
     <main class="flex-1">
-      <slot />
+      <!--      <slot />-->
+      <h1>Index page</h1>
     </main>
 
     <footer>

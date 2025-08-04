@@ -10,7 +10,7 @@ defineProps<{ episodes: string[] }>()
       :key="episode"
       data-test="episode-link"
       :to="{ name: 'episode-id', params: { id: episode } }"
-      class="flex w-10 items-center justify-center rounded border border-primary py-1 text-primary transition-colors duration-300 hover:text-orange-400 dark:border-primary-light dark:text-primary-light dark:hover:text-orange-400"
+      class="border-primary text-primary dark:border-primary-light dark:text-primary-light flex w-10 items-center justify-center rounded-xs border py-1 transition-colors duration-300 hover:text-orange-400 dark:hover:text-orange-400"
     >
       <span class="">{{ episode }}</span>
     </NuxtLink>

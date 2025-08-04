@@ -24,7 +24,7 @@ const navItems: {
 
 <template>
   <footer data-test="footer">
-    <base-container class="flex items-center justify-center space-x-6 px-4 py-6">
+    <base-container class="flex items-center justify-center gap-6 px-4 py-6">
       <a
         v-for="{ testId, icon, hrefLink } in navItems"
         :key="testId"
@@ -35,7 +35,7 @@ const navItems: {
       >
         <component
           :is="icon"
-          class="h-6 w-6 fill-primary-light transition duration-300 hover:fill-orange-400"
+          class="fill-primary-light h-6 w-6 transition duration-300 hover:fill-orange-400"
         />
       </a>
     </base-container>

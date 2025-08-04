@@ -5,7 +5,7 @@ const { status, species, type, gender } = defineProps<CharacterInfoListProp>()
 </script>
 
 <template>
-  <ul class="space-y-1 text-lg">
+  <ul class="gap-1 text-lg">
     <li class="flex items-center">Status: {{ status }}</li>
     <li class="flex items-center">Species: {{ species }}</li>
     <li class="flex items-center">Type: {{ type }}</li>

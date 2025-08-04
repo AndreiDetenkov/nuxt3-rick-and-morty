@@ -1,43 +1,25 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  css: ['~/assets/css/main.css'],
+
   runtimeConfig: {
     public: {
       baseUrl: '',
     },
   },
 
-  css: ['./assets/css/main.css'],
+  modules: ['@nuxt/test-utils/module', '@nuxt/image', 'nuxt-svgo', '@nuxt/eslint', '@nuxt/ui'],
 
-  modules: [
-    '@pinia/nuxt',
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
-    '@nuxt/test-utils/module',
-    '@nuxt/image',
-    'nuxt-svgo',
-    'shadcn-nuxt',
-    '@nuxt/eslint',
-  ],
+  ui: {
+    prefix: 'base',
+  },
 
-  tailwindcss: {
-    cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'last' }],
-    configPath: '~/tailwind.config.ts',
+  fonts: {
+    families: [{ name: 'Poppins', provider: 'google' }],
   },
 
   svgo: {
     defaultImport: 'component',
   },
-
-  colorMode: {
-    preference: 'system',
-    classSuffix: '',
-  },
-
-  shadcn: {
-    prefix: '',
-    componentDir: './app/components/ui',
-  },
-
-  compatibilityDate: '2024-11-16',
 })
