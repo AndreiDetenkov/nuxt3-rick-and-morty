@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-@theme {
+@theme static {
   --color-title: #202329;
   --color-primary: #3c3e44;
   --color-primary-light: #9e9e9e;

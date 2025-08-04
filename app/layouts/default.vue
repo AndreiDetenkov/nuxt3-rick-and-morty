@@ -1,24 +1,11 @@
 <template>
   <div class="grid min-h-screen grid-rows-[auto_1fr_auto]">
-    <header>
-      <BaseHeader>
-        <template #logo>
-          <BaseLogo />
-        </template>
+    <header>Header</header>
 
-        <div class="w-full" />
-
-        <Navigation class="mr-8" />
-        <ToggleColorMode />
-      </BaseHeader>
-    </header>
-
-    <main class="flex-1">
+    <main>
       <slot />
     </main>
 
-    <footer>
-      <BaseFooter />
-    </footer>
+    <footer>Footer</footer>
   </div>
 </template>

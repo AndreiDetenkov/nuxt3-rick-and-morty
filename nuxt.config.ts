@@ -11,11 +11,9 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/test-utils/module', '@nuxt/image', '@nuxt/eslint', '@nuxt/ui'],
 
-  ui: {
-    prefix: 'base',
-  },
-
   fonts: {
     families: [{ name: 'Poppins', provider: 'google' }],
   },
+
+  compatibilityDate: 'latest',
 })
