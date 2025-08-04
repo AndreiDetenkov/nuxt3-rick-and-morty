@@ -3,7 +3,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <TheContainer>
+  <BaseContainer>
     <h1>Location - {{ route.params.id }}</h1>
-  </TheContainer>
+  </BaseContainer>
 </template>
